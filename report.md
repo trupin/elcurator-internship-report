@@ -49,9 +49,74 @@ We talked about the company's situation, but we haven't explained the activity o
 
 ElCurator is a **collaborative [curation](https://en.wikipedia.org/wiki/Digital_curation) platform**. In other words, our mission is to encourage workmates to share high quality contents in their company, and highlight the best shared contents.
 
-The concept can be described by this 3 main steps:
+The concept is defined by 3 main steps:
 
 1. **Select** the best contents.
 2. **Add** a short description to justify why the content is relevant.
 3. **Share** it to a community.
 
+### Why our clients need us?
+
+Since June 2014, when we publicly launched our product, we started recognizing our clients. Obviously, we are targetting medium and large businesses. Our strategy is mainly a B2B (business to business) strategy. Some functionalities are B2C (business to client) oriented, but the goal is always to be more relevant to large companies by being more famous on the market.
+
+So far we identified that our product is a good fit for medium digital and consulting agencies, education organizations, and large banks. For each kind of client, we noticed several needs that we are able to fit:
+
+* **Stop infobesity**. It is nowadays a fact that we receive too many informations by mail at work. If your workmates are sending you their curated content by mail, there are good chances that you ignore it because you have plenty of more important mails to treat. We believe there should be a time for treating mails, and a time for curation in a work day, and that's exactly what elCurator permits to do.
+* **Identify and highlight experts**. It can be difficult for managers to see who is expert on what topic. Thanks to elCurator, it is very easy to identify them by checking what they are sharing.
+* **Collective knowledge capitalization**. The content of the company is saved by the our platform. ElCurator
+* **Continuous formation**. Every workmates can easily reach expert contents and quickly start developing new skills.
+
+### The main features
+
+If you need to work on elCurator, you need to know what are the main features, so you realize what are the main use cases of our product.
+
+Elcurator is made of several tools:
+
+- A **website**, which is the most used platform by our users so far.
+- Two **web browser extension**; Chrome and Firefox.
+- Two **mobile applications**; Android and iOS.
+
+#### User story
+
+Because features list wouldn't be very attractive to read, let's tell a user story.
+
+Manu is a project manager. He knows its workmates are read plenty of articles on the we every day, but keep it for them. He is desperate because his team as a pretty high turnover, and each time someone is leaving, he knows that all his expertise is leaving with him.
+
+Manu needs a solution. He needs to convince his workmates to share their knowledge alltogether. Most of all, he needs to store this knowledge, so the new recruits can take advantage of it when they arrive in the team.
+
+Searching on the web, Manu types *best curation tool* on Google, and come to the elCurator landing page. It's said it's free for one organization made of less than 20 users. Eureka! Manu clicks on the *'create an account'*.
+
+##### Create an account
+
+![Create an account](images/user_story/elcurator_create_account.png)
+
+There are 3 ways to of openning an account:
+
+1. Using an existing Google account.
+2. Using an existing Yammer account.
+3. By filling a form.
+
+Manu choose to create an account with Google.
+
+##### First content
+
+![First content](images/user_story/elcurator_first_content.png)
+
+Manu then click on the *+* button to add his first content on the plateform.
+
+![Add an article to read later](images/user_story/elcurator_personal_article_form.png)
+
+On this form, Manu needs to:
+
+1. Put the url of the content he wants to share.
+2. Click on the *read later* button to validate and add its articles into the *read later list*
+
+##### The read later list
+
+The *read later list* is a place where Manu can store his personal articles.
+
+![To read later list](images/user_story/to_read_later_list.png)
+
+From here, he can:
+
+1. See how many articles 
