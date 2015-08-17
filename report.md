@@ -12,7 +12,7 @@ This document is obviously targeting the developers, but we put all our efforts 
 
 ## An inner-enterprise
 
-It is actually quite complex to explain what is our working environment. What is OCTO Technology and is it related to us? Are we an independant company or not? Who is investing in us? We will try to clarify these points in this chapter.
+It is actually quite complex to explain what is our working environment. What is OCTO Technology and how is it related to us? Are we an independant company or not? Who is investing in us? We will try to clarify these points in this chapter.
 
 ### What is OCTO Technology?
 
