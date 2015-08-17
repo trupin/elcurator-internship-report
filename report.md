@@ -12,7 +12,7 @@ This document is obviously targeting the developers, but we put all our efforts 
 
 ## An inner-enterprise
 
-It is acutally quite difficult to tell exactly what elCurator is. Is it a start-up, an enterprise, how is OCTO Technology related to us? We imagine you are wondering all these things, and it is very important to clarify this point.
+It is actually quite complex to explain what is our working environment. What is OCTO Technology and is it related to us? Are we an independant company or not? Who is investing in us? We will try to clarify these points in this chapter.
 
 ### What is OCTO Technology?
 
@@ -31,7 +31,7 @@ That day, **Christopher Parola** - now CEO of the company - started the project 
 
 We can say that elCurator SAS is not really a start-up, but more an inner-enterprise, because it really started from the inside of OCTO Technology, but has been directed by two consultants, to then become an affiliate. 
 
-To juridically define it, we can say it is a **simplified limited liability company**, which is what *SAS* is actually meaning.
+To juridically define it, we can say it is a **simplified limited liability company**, which is what *SAS* is actually meaning. It is an **affiliate** of OCTO Technology as well, since it owns more than 50% of the its capital.
 
 To simplify, **we are developping, selling and delivering, a SAAS (software as a service) product**.
 
