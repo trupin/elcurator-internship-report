@@ -109,14 +109,54 @@ Manu then click on the *+* button to add his first content on the plateform.
 On this form, Manu needs to:
 
 1. Put the url of the content he wants to share.
-2. Click on the *read later* button to validate and add its articles into the *read later list*
+2. Click on the *read later* button to validate and add its articles into the *to read list*
 
-##### The read later list
+##### The to read list
 
-The *read later list* is a place where Manu can store his personal articles.
+The *to read list* is a place where Manu can store his personal articles.
 
-![To read later list](images/user_story/to_read_later_list.png)
+![To read list](images/user_story/to_read_later_list.png)
 
 From here, he can:
 
-1. See how many articles 
+1. See how many articles he has left to read.
+2. Click on an article card to read it.
+3. Delete an article from the list. It could be not good enough after all.
+4. Tag an article.
+5. When he will have too many articles in the list, he will be able to search into its article contents.
+
+This list is designed to be like a todo list. The goal is to read the articles Manu put into it, then trash it, or classify it.
+
+##### The reading page
+
+Manu wants to read his article. He clicks on the card, and here is what he sees.
+
+![Reading page](images/user_story/article_reading_page.png)
+
+On this page, he find the article content. Notice that elCurator applied his own design to improve the readability.
+
+He also can:
+
+1. Customize the font class and size.
+2. Share his content by email, or on Twitter, Google+, Pocket, etc...
+
+##### Create a crew
+
+Manu can easily store and consult his personal articles, but now he would like to know how he will convince his workmates to share their knowledge through elCurator.
+
+No worries, we are coming to it!
+
+To be able to share content on the platform, Manu needs to invite his workmates. But to what? 
+Manu finds the *create a crew* button just below the elCurator's logo in the navigation bar.
+What we call a crew is actually a group of collaborators. Manu creates a crew named *Eldorado*. He is now **administrator** of his own crew.
+
+Right after creating his crew, he is redirected to the page below.
+
+![New crew page](images/user_story/new_crew_page.png)
+
+Here he discovers what he can do with his crew:
+
+1. Create **categories**. Remember that we want to be able to easily find relevant contents shared by people who won't necessary tag their content the same way. That's why we force the administrator to create categories in order to oblige his crew members to follow an editorial policy.
+2. Share an article with his crew members.
+3. Invite his workmates to do the same.
+
