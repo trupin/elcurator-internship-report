@@ -43,7 +43,15 @@ As we just said, elCurator started living from the inside of OCTO Technology, th
 
 ## The product
 
-We talked about the company's situation, but we haven't explained the activity of elCurator. What are we actually doing here? As you must have understood, elCurator is a software company, developping and selling a product named elCurator as well. In this chapter, you will find the informations you need about the product to easily understand and start manipulating it. We think each members of our team should be capable to explain the product, and talk about it outside our walls.
+We talked about the company's situation, but we haven't explained the activity of elCurator. What are we actually doing here? As you must have understood, elCurator SAS is a software company developping and selling a product named elCurator. In this chapter, you will find the informations you need about the product to easily understand and start manipulating it. We think each members of our team should be capable of explaining the product, and talking about it outside our walls.
 
 ### The concept
+
+ElCurator is a **collaborative [curation](https://en.wikipedia.org/wiki/Digital_curation) platform**. In other words, our mission is to encourage workmates to share high quality contents in their company, and highlight the best shared contents.
+
+The concept can be described by this 3 main steps:
+
+1. **Select** the best contents.
+2. **Add** a short description to justify why the content is relevant.
+3. **Share** it to a community.
 
