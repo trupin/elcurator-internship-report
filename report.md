@@ -160,3 +160,27 @@ Here he discovers what he can do with his crew:
 2. Share an article with his crew members.
 3. Invite his workmates to do the same.
 
+##### Share an article to a crew
+
+Manu creates several categories and comes back to his article to read. Now he has created a crew, he can click on the *share* button to share his article to the *Eldorado* crew. Notice he could have done the same by clicking on the *+* button on the right of the navbar.
+
+![Shared article form](images/user_story/elcurator_shared_article_form.png)
+
+Manu has to fill several fields:
+
+1. The article title.
+2. The article description.
+3. The article category.
+4. Finally he can choose to ask to elCurator to extract the content as a text, or to take a screenshot of the webpage. The screendshot it usually used when you want to share a graphical content which can't be extracted.
+
+##### Improve the article's visibility
+
+After having shared his article, Manu is redirected to the shared article page.
+
+![Improve the article visibility](images/user_story/elcurator_edit_sharing.png)
+
+Here he can:
+
+1. Add some tags.
+2. Recommend it to a member of his crew.
+3. Share it publicly.
