@@ -10,7 +10,7 @@ Because we are aware there is a lot of informations to absorb during your first 
 
 This document is obviously targeting the developers, but we put all our efforts to make it understandable by everybody. If you are curious about what we are doing at elCurator, and even if you are not a developer, this document should still be interesting, and we hope it will statisfy your curiosity.
 
-## An inner-enterprise
+## A startup inside OCTO Technology
 
 It is actually quite complex to explain what is our working environment. What is OCTO Technology and is it related to us? Are we an independant company or not? Who is investing in us? We will try to clarify these points in this chapter.
 
@@ -31,15 +31,44 @@ ElCurator is a product which was **initiated by two consultants of OCTO Technolo
 
 That day, **Christopher Parola** - now CEO of the company - started the project with several workmates, and in one day of work, they tried to make a prototype. This was a failure since it wasn't working as expected, and Christopher continued to work on it on his free time. **Jeremy Venezia** - now CTO of the company - joined him several weeks after that, and helped him in his task. The product began to work, and a few consultants at OCTO started using it. With time, more and more people were using it, and Christopher and Jeremy decided to **deploy it to the whole company**. Maintaining the project was taking to much time, and the two consultants asked to be full-time working on it. That's how elCurator began to live, as a project funded by OCTO Technology. In June 2014, the project has been **publicly released** and OCTO Technology started to communicate on it in order to sell it to other companies (mainly to its own clients). In January 2015, the project has been **affiliated**, and it became a company named **elCurator SAS**.
 
-We can say that elCurator SAS is not really a start-up, but more an inner-enterprise, because it really started from the inside of OCTO Technology, but has been directed by two consultants, to then become an affiliate. 
+### Are we a startup?
 
-To juridically define it, we can say it is a **simplified limited liability company**, which is what *SAS* is actually meaning. It is an **affiliate** of OCTO Technology as well, since it owns more than 50% of the its capital.
+A startup is an entrepreneurial venture or a new business in the form of a company, a partnership or temporary organization designed to search for a repeatable and scalable business model.
 
-To simplify, **we are developping, selling and delivering, a SAAS (software as a service) product**.
+This correspond pretty well to our situation since we are still searching our place on the market by trying to reach as much clients as possible.
+
+### Are we an intrapreneurship?
+
+Intrapreneurship is the act of behaving like an entrepreneur while working within a large organization.
+
+We can say we are an intrapreneurship as well, since elCurator has been created and directed by two OCTO consultants from its begining.
+
+### And Juridically?
+
+To juridically, we are a **simplified limited liability company**, which is what *SAS* is actually meaning in french. We are an **affiliate** of OCTO Technology as well, since it owns more than 50% of the our capital.
 
 ### Our legacy
 
-As we just said, elCurator started living from the inside of OCTO Technology, thanks to its community. Its two creators are former consultants. We are all the time in relationship with other consultants of the company. This is actually a good thing since OCTO has a very resourceful community made of experts of a large range of topics (the [OCTO blog](http://blog.octo.com/) demonstrates it pretty well). This is obviously influencing our way of working together, our methologies, etc... It is like a legacy to us, which is very important and resourceful. We will talk about this in more details in the next parts of this document.
+As we just said, elCurator started living inside OCTO Technology. Its creators are two former consultants. We are all the time in relationship with other consultants of the company. This is actually a good thing since OCTO has a very resourceful community made up of experts on many topics (the [OCTO blog](http://blog.octo.com/) demonstrates it pretty well). This is obviously influencing our way of working together, our methologies, etc... It is a very resourceful legacy to us.
+
+## Our team
+
+![Organization chart](images/organization_chart.png)
+
+With time, we developed three main activities around our product:
+
+- Software developement
+- Communication / Community management
+- Sales
+
+Since we are an affiliate of OCTO Technology, we beneficiate of some extra services as:
+
+- Consulting on IT topics
+- Human resources
+- Business engineering
+- Communication
+
+This extra help is very important because it provides us some kinds of frameworks on which we can rely when we don't have the necessary skills. For example, when Christopher had to write a contract from scratch for our first client, he has been able to get some help by OCTO. We also get some help when we need to hire new people. Wand we could tell more examples...
 
 ## The product
 
@@ -73,7 +102,6 @@ If you need to work on elCurator, you need to know what are the main features, s
 Elcurator is made of several tools:
 
 - A **website**, which is the most used platform by our users so far.
-- Two **web browser extension**; Chrome and Firefox.
 - Two **mobile applications**; Android and iOS.
 
 #### User story: the web platform
@@ -252,9 +280,74 @@ Manu his now leaving his workplace. He starts reading an article on his phone in
 
 ###### Note: Manu could also have used the *+* floating button in the application to access the same form. He also could have chosen to share to his crew instead.
 
-##### Offline accesss
+##### Offline access
 
 Manu is now in the subway. He wants to continue to read his article in elCurator. Since all the content shown in the application is immediately accessible offline, he can continue find back his article in his *to read list* and continue to read without even noticing he lost his network access.
 
-###### Note: almost every features are actually accessible online and offline in the mobile application.
+###### Note: almost every features are also accessible offline in the mobile application.
+
+#### User story: the end
+
+Manu is now an happy manager since he has setup an engaging sharing policy in his workteam. His workmates are now able to share their knowledge alltogether, and Manu can even see the statistics of his crew in order to measure if elCurator is efficient or not.
+
+## Our methodologies
+
+Developing a product with many use cases like elCurator isn't an easy task. We need to be focused on development quality, client support, our marketing image, finding clients, etc.
+
+There are many topics to study, many metrics to observe, many skills to have, and we would be lost in less than a week if we weren't applying few methodologies.
+
+In this chapter, you will learn our way of getting things done at elCurator.
+
+### Lean startup
+
+The lean startup is a method for developing businesses and products developped by Eric Ries in 
+2008, based on his experience in IT companies of the Silicon Valley.
+
+#### How we do it
+
+At elCurator, we are trying to apply the following terminologies as much as possible:
+
+- **Minimum viable product**. It is the version of a new product which allows a team to collect the maximum amount of validated learning about customers with the least effort. ElCurator actually began by a MVP which as been then improved step by step.
+ 
+- **Continuous deployment**. It is a process whereby all code that is written for an application is immediately deployed into production. We are using specifics workflows and tools in order to be able to continuously deploy the code. This will be described later in this document.
+
+- **Actionable metrics**. These are metrics specifically put by our developers in the code. For example, a metric to know how many times our users clicked on a button which gives access to a specific feature. Day by day, we can then follow these kind of metrics to observe how our product is really used.
+ 
+- **Build-Measure-Learn**. It is a learning cycle of turning ideas into products, measuring customers' reactions and behaviors against built products, and then deciding whether to persevere or pivot the idea; this process repeats as many times as necessary.
+
+![Build measure learn loop](images/build_measure_learn_loop.jpg)
+
+#### Why do we need to be lean?
+
+We are a little team. We don't have many resources. We work on a high risk product, since we still don't know if we will be able to make monney with it. For all these reasons, we need to learn from our users to find our place on the market. We are convinced lean startup is a very efficient methodology to do it.
+
+### Agilility
+
+Agile software development is a group of software development methods in which solutions evolve through collaboration between self-organizing,[1] cross-functional teams. It promotes adaptive planning, evolutionary development, early delivery, continuous improvement, and encourages rapid and flexible response to change.
+
+#### How we do it
+
+At elCurator, we are trying to apply the following principles as much as possible:
+
+- **Iterative**, **incremental** and **evolutionary** planning. To apply this, we use a virutal *Kanban*.
+
+- Efficient and **face-to-face communication**. This is what we call the *stand up*. Every morning at 10am, all the team stand up and each teammate tells what he did yersterday and what he is going to do today.
+
+- Very **short feedback loop** and adaptation cycle.
+
+- **Quality** focus. At elCurator, we believe that quality code means a quality product. All the code our developers are writing is reviewed by at least one different developer. If the code quality is not good enough, the task isn't considered as done.
+
+#### Why do we need to be agile?
+
+Almost for same reasons as we need to be lean. We need flexibility because we don't know our market very well yet. We need to adapt very quickly to our clients demands.
+
+### Development workflow
+
+#### Trello, our virtual Kanban
+
+Kanban is a system to control the logistical chain from a production point of view, and is an inventory control system. Kanban was developed by Taiichi Ohno, an industrial engineer at Toyota, as a system to improve and maintain a high level of production.
+
+For practical reasons, we are using a virtual Kaban thanks to a tool called [Trello](https://trello.com/).
+
+![Virtual Kanban](images/android_virtual_kanban.png)
 
