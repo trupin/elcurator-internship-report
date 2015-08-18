@@ -12,7 +12,7 @@ This document is obviously targeting the developers, but we put all our efforts 
 
 ## An inner-enterprise
 
-It is actually quite complex to explain what is our working environment. What is OCTO Technology and how is it related to us? Are we an independant company or not? Who is investing in us? We will try to clarify these points in this chapter.
+It is actually quite complex to explain what is our working environment. What is OCTO Technology and is it related to us? Are we an independant company or not? Who is investing in us? We will try to clarify these points in this chapter.
 
 ### What is OCTO Technology?
 
@@ -213,17 +213,48 @@ This list is the same as the crew's list except it only contains the publicly sh
 
 #### User story: the mobile applications
 
+######Note: we wont describe here the iOS's features since they are equivalent as what is implemented on Android.
+
 ##### Installation
 
 Now that Manu knows how to use the platform, we wonders; what if I want to be notified on my mobile when I receive an article? and what if I want to read some content in the subway?
 
 Since he has an Android phone, he goes to the Play Store and search for elCurator.
 
-######Note: we wont describe here the iOS's features since they are equivalent as what is implemented on Android.
-
 ![Play store](images/user_story/elcurator_play_store_page.png)
 
 He installs the elCurator's application on his smartphone.
 
 ##### Login
+
+When launching the application for the first time, Manu get the login page.
+
+![Android login page](images/user_story/elcurator_mobile_login.png)
+
+Just like on the website, Manu can login using:
+
+1. His Google account.
+2. His regular credentials.
+
+##### Navigation
+
+Manu logs in the application via his Google account and arrives on the *to read* list. He finds almost the same graphics elements than on the website.
+
+![Android navigation](images/user_story/elcurator_mobile_navigation.png)
+
+Has we can see above, the application permits him to navigate to the *world list*, the *to read list* and his *crew's list*. 
+
+##### Add an article
+
+Manu his now leaving his workplace. He starts reading an article on his phone in the elevator, but doesn't have much time to finish. He can put his article in his *to read list* like below.
+
+![Android add article to read](images/user_story/elcurator_mobile_add_article_to_read.png)
+
+###### Note: Manu could also have used the *+* floating button in the application to access the same form. He also could have chosen to share to his crew instead.
+
+##### Offline accesss
+
+Manu is now in the subway. He wants to continue to read his article in elCurator. Since all the content shown in the application is immediately accessible offline, he can continue find back his article in his *to read list* and continue to read without even noticing he lost his network access.
+
+###### Note: almost every features are actually accessible online and offline in the mobile application.
 
