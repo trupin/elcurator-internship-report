@@ -76,7 +76,7 @@ Elcurator is made of several tools:
 - Two **web browser extension**; Chrome and Firefox.
 - Two **mobile applications**; Android and iOS.
 
-#### User story
+#### User story: the web platform
 
 Because features list wouldn't be very attractive to read, let's tell a user story.
 
@@ -175,12 +175,55 @@ Manu has to fill several fields:
 
 ##### Improve the article's visibility
 
-After having shared his article, Manu is redirected to the shared article page.
+After having shared his article, Manu is redirected to the shared article page, where he finds the readable content plus an optional form to fill in order to improve the visibility of the arricle on the platform.
 
 ![Improve the article visibility](images/user_story/elcurator_edit_sharing.png)
 
 Here he can:
 
-1. Add some tags.
+1. Add tags.
 2. Recommend it to a member of his crew.
-3. Share it publicly.
+3. Share it to what we call the *world*. It is a public list of articles. When this option is enabled, the article is still shared to the Manu's crew, but it's also visible in the *world list* by to all the elCurator's users.
+4. Share it by email, Twitter, Google+, etc...
+
+##### The crew's list
+
+Manu then click on the *back* button in the navigation bar and is goes to its crew's list.
+
+![The crew's list](images/user_story/elcurator_crew_home_page.png)
+
+This page is one of the most important of the application. Here he can find back the article he just shared to his crew. On this page, Manu notices few things:
+
+1. The rate count. When the members of his crew are going to read the article, they will be able to give it a point if they liked it. The number of *likes* is shown here. When the flag is green, it means the current user can rate the article, but when it's grey, it means the he is the sharing's author, which means he cannot give a point to himself.
+2. The category. As we said, every article must be categorized. The article's category is shown here. Each categories has a specific color.
+3. The *read later* button permits to the members of Manu's crew to put it in their *to read list*. We think our users have rarely the time to read immediately the content of an article. The to *read later* button is here to encourage them not to forget it, and read it later.
+4. A new kind of card which represents his rank among his crew's users. This rank is calculated with the number of rates and readers he had so far.
+5. The *search bar* on which he finds a way to filter by category and keywords. He can also hide or show the read articles. And he can order the list by date, read count or popularity.
+6. Manu is also using another tool to read his news feeds. He can do it by clicking on the *RSS* button which is a representation of the list using the RSS format. That way, Manu can import all his crew's content in his favorite RSS reader tool.
+
+##### The world's list
+
+Manu invited his workmates to his crew, but waiting for us to share some content, he wants to discover what the world is doing on elCurator.
+
+He clicks on the *world* button in the navigation bar.
+
+![The world's list](images/user_story/elcurator_world_page.png)
+
+This list is the same as the crew's list except it only contains the publicly shared articles, and there is a way of filtering by tags instead of categories.
+
+#### User story: the mobile applications
+
+##### Installation
+
+Now that Manu knows how to use the platform, we wonders; what if I want to be notified on my mobile when I receive an article? and what if I want to read some content in the subway?
+
+Since he has an Android phone, he goes to the Play Store and search for elCurator.
+
+######Note: we wont describe here the iOS's features since they are equivalent as what is implemented on Android.
+
+![Play store](images/user_story/elcurator_play_store_page.png)
+
+He installs the elCurator's application on his smartphone.
+
+##### Login
+
