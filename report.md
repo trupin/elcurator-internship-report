@@ -329,13 +329,20 @@ Agile software development is a group of software development methods in which s
 
 At elCurator, we are trying to apply the following principles as much as possible:
 
-- **Iterative**, **incremental** and **evolutionary** planning. To apply this, we use a virutal *Kanban*.
+- **Iterative**, **incremental** and **evolutionary** planning. To apply this, we use a virutal *Kanban*. 
 
-- Efficient and **face-to-face communication**. This is what we call the *stand up*. Every morning at 10am, all the team stand up and each teammate tells what he did yersterday and what he is going to do today.
+- Efficient and **face-to-face communication**. At elCurator, we are used to do several recurrent meetings:
+	
+	- **Standup**. Every morning at 10am, we stands up and each teammate explains what he did yesterday and what he will be doing today.
+	- **Restrospective**. Every two weeks, we meet in a room in order to observe what's going great and what's going wrong in the team and to find a way to resolve what's doing wrong.
+	- **Team building**. For example, we assisted to a workshop where our goal was to design our own desks.
+	- **Brown bag lunch (BBL)**. When we have an extra topic to discuss, we do on our lunch time.
 
+	We are all working in the same open space and everybody is almost continuously avalaible.
+	
 - Very **short feedback loop** and adaptation cycle.
 
-- **Quality** focus. At elCurator, we believe that quality code means a quality product. All the code our developers are writing is reviewed by at least one different developer. If the code quality is not good enough, the task isn't considered as done.
+- **Quality** focus. We believe that quality code means quality product. All the code our developers are writing is reviewed by at least one different developer. If the code quality related to a task is not good enough, then it isn't considered as done.
 
 #### Why do we need to be agile?
 
@@ -363,7 +370,27 @@ After a task has been created and put into the Kanban, someone can be assigned t
 
 ![Virtual Kanban task](images/virtual_kanban_task.png)
 
-#### Our development workflow
+#### From an idea to a production ready feature
+
+The chart below actually explains how we are using our virtual Kanban.
 
 ![Development workflow chart](images/development_process_chart.png)
+
+1. **Backlog**. When an idea emerge, Christopher describes it as a feature and put it in the *backlog* at the right priority level.
+
+2. **To do**. As soon as we starts to implement a feature, Christopher takes the highest task from the *backlog*, and puts it in the *to do* column of the Kanban. If the task is too eavy, it is split into unitary tasks so it can be easily processed by the development team.
+
+3. **Doing**. When a developer is free, he takes the highest task from the *to do* column and puts it in the *doing* column. This column references all the tasks on which at least one developer is currently working. Notice there should never be more than one task per developer here.
+
+4. **To read**. As soon as a task is considered done by its developer, it is put in the *to read* column. This column references the code to be reviewed by at least one confirmed developer before it can be considered fully done. This step is very important since it permits to observe and regulate the quality of the project's code.
+
+	If the code is not good enough, the task is put back in the *to do* column, and the concerned developer will have to fix it.
+	
+5. **Done**. If the code is good enough, the task goes into the *done* column. Christopher is in charge of validating the features of this column. If it is all good, it goes to the next step, otherwise, it come back to the *to do* column.
+
+6. **Validated**. This column is a buffer where all the production ready features are stacked, waiting to be released. When a release is done, all these features are going to the *released* column.
+
+7. **Released**. This is an historic of the features which have been released and for which the code is currently in production.
+
+###### Notice how we arranged this workflow to make it as agile and lean as possible. The releases are continuous, which means we try to push our code in production as soon as a feature is ready. The *validated* buffer is only here in case the release is technically impossible, so the process is not stopped. Right after a problem is detected, it is immediately communicated and put backward in the process so it can be fixed as soon as possible.
 
