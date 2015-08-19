@@ -45,7 +45,7 @@ We can say we are an intrapreneurship as well, since elCurator has been created 
 
 ### And Juridically?
 
-To juridically, we are a **simplified limited liability company**, which is what *SAS* is actually meaning in french. We are an **affiliate** of OCTO Technology as well, since it owns more than 50% of the our capital.
+We are a **simplified limited liability company**, which is what *SAS* is actually meaning in french. We are an **affiliate** of OCTO Technology as well, since it owns more than 50% of the our capital.
 
 ### Our legacy
 
@@ -68,7 +68,7 @@ Since we are an affiliate of OCTO Technology, we beneficiate of some extra servi
 - Business engineering
 - Communication
 
-This extra help is very important because it provides us some kinds of frameworks on which we can rely when we don't have the necessary skills. For example, when Christopher had to write a contract from scratch for our first client, he has been able to get some help by OCTO. We also get some help when we need to hire new people. Wand we could tell more examples...
+This extra help is very important because it provides us some kinds of frameworks on which we can rely when we don't have the necessary skills. For example, when Christopher had to write a contract from scratch for our first client, he has been able to get some help by OCTO. We also get some help when we need to hire new people. And many more examples...
 
 ## The product
 
@@ -349,5 +349,21 @@ Kanban is a system to control the logistical chain from a production point of vi
 
 For practical reasons, we are using a virtual Kaban thanks to a tool called [Trello](https://trello.com/).
 
+##### Columns
+
+Trello is a task manager which permits to regroup our tasks inside named columns. The Kanban is read from left to right. Each column represent a step of our process. The higher is a task in a column, the higher is its priority.
+
 ![Virtual Kanban](images/android_virtual_kanban.png)
+
+##### Tasks
+
+Each task correspond to the most minimalist feature we can describe. If we observed that a done task is producing an abnormal behaviour on the application, we labelize it as a bug or a crash.
+
+After a task has been created and put into the Kanban, someone can be assigned to it. If someone doesn't have any assigned task, he can assign himself to the higher one in the column corresponding to its role.
+
+![Virtual Kanban task](images/virtual_kanban_task.png)
+
+#### Our development workflow
+
+![Development workflow chart](images/development_process_chart.png)
 
