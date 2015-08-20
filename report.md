@@ -348,7 +348,7 @@ At elCurator, we are trying to apply the following principles as much as possibl
 
 Almost for same reasons as we need to be lean. We need flexibility because we don't know our market very well yet. We need to adapt very quickly to our clients demands.
 
-### Development workflow
+### Production workflow
 
 #### Trello, our virtual Kanban
 
@@ -370,11 +370,11 @@ After a task has been created and put into the Kanban, someone can be assigned t
 
 ![Virtual Kanban task](images/virtual_kanban_task.png)
 
-#### From an idea to a production ready feature
+#### From the ideas to production ready features
 
-The chart below actually explains how we are using our virtual Kanban.
+The chart below explains how we actually use our virtual Kanban.
 
-![Development workflow chart](images/development_process_chart.png)
+![Production workflow chart](images/development_process_chart.png)
 
 1. **Backlog**. When an idea emerge, Christopher describes it as a feature and put it in the *backlog* at the right priority level.
 
@@ -393,4 +393,83 @@ The chart below actually explains how we are using our virtual Kanban.
 7. **Released**. This is an historic of the features which have been released and for which the code is currently in production.
 
 ###### Notice how we arranged this workflow to make it as agile and lean as possible. The releases are continuous, which means we try to push our code in production as soon as a feature is ready. The *validated* buffer is only here in case the release is technically impossible, so the process is not stopped. Right after a problem is detected, it is immediately communicated and put backward in the process so it can be fixed as soon as possible.
+
+### Continuous integration
+
+We saw that our production workflow is lean, and necessitates to be continuous. To continuously be able to push our code in production, we need to always be aware of the build state of the project. That's what the continuous integration is doing for us. 
+
+![Development workflow chart](images/continuous_integration_chart.jpg)
+
+Let's explain this chart a little:
+
+1. The developer commits his code and push it on the revision control server. At elCurator, we use Git, which is the most popular distributed revision control system.
+
+2. For each revision, Git triggers the continuous integration (CI) server. At elCurator, our CI is a TeamCity server installed on a local server.
+
+3. The CI server is in charge of running several tasks:
+
+	- Configuration builds, in order to check if they are correctly building.
+	- A static code analysis, to check the code quality. For example, if a developer let an obvious error in his code, the code analyser is able to see it.
+	- The unit tests, which permit to know if the project core functions are still fit for use.
+
+4. All these tasks outputs are stored in a report. If this report contains one or more failures, the CI server send an email to our development team and stops there. The mail contains the report so the developers can investigate. At elCurator, we use a plugin directly integrated in our code editor in order to be always aware of the build state, and to interact with the logs more easily.
+
+5. If everything is running without error, the CI server deploys the project. At elCurator, we have two deployment methods:
+
+	- Staging server. Our staging (pre-production) web server is hosted on Heroku. This service permits us to easily deploy to the server with a single command line. It was easy to make our CI server deploys the project on the staging web server that way.
+	- Staging mobile packaged application. The CI server is also configured to package our mobile application and deploy it on Appaloosa, which is a private application store provider.
+
+6. At this step, we have all the project is ready for functional tests. For bigger projects, automated functional tests are developed, so the CI server can run them. At elCurator we still do this part manually. It actually corresponds to the validation step of our production workflow.
+
+###### Note: The staging web server and staging mobile applications are not only used for validation. They are also very useful to observe the project's state at any time. It is indeed very stimulating to be able to see what our team is producing, at least to be proud of our work, but also to be able to easily share our opinion about it.
+
+### Test-driven development
+
+The continuous integration methodology is very important to us because this is our only way to know if the project is ready for production or not. And you must have noticed that this methodology cannot be efficient if we don't write automated tests.
+
+In order to be sure our developers are writing tests, we encourage them to use a development methodology called test-driven development (TDD). 
+
+![Test-drive development chart](images/test_driven_development_chart.png)
+
+As we can see above, it is a process that relies on the repetition of a very short development cycle:
+
+1. The developer writes an (initialy failing) automated test case that defines a desired improvement or new function.
+2. Then he produces the minimum amount of code to pass that test.
+3. And finally refactors the new code to acceptable standards.
+4. Repeat.
+
+At elCurator we think automated tests are extremely important. Most of the time, if you commit some untested code, it will be rejected at the *code review* step, and an experimented developer will ask you to implement them. Of course, we are aware that it is not an easy task, and you will find the necessary resources in our team or in OCTO Technology to learn how to efficiently test your code.
+
+## Technology stack
+
+In this chapter, we will describe the layers of components or services that are used to provide our website, our API and our mobile applications.
+
+### Server application
+
+![Server application production stack chart](images/server_application_technology_stack.png)
+
+### Mobile application
+
+![Mobile application stach chart](images/mobile_application_technology_stack.png)
+
+## Useful resources
+
+### Methodologies
+
+- [Large scale agile tips by Hervé Lourdin (@USI by OCTO)](https://www.youtube.com/watch?v=OWzPjY2TVkk&feature=youtu.be)
+- [Slides about lean startup by Christopher Parola (@OCTOAcademy)](http://fr.slideshare.net/christopherparola/formation-lean-startup-octo-academy-lite)
+- [Clean code: a book about how to write good looking code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+
+### Mobile applications
+
+#### Android
+- [Learning guide](https://github.com/codepath/android_guides/wiki/Beginning-Android-Resources)
+- [Best practices for the beginner](https://github.com/futurice/android-best-practices)
+- [Awesome ui libraries list](https://github.com/wasabeef/awesome-android-ui)
+- [Another awesome libraries list](https://github.com/snowdream/awesome-android)
+- [How Facebook improved performances on Android with flatbuffers](https://code.facebook.com/posts/872547912839369/improving-facebook-s-performance-on-android-with-flatbuffers/)
+
+#### iOS
+- [Learning guide](https://github.com/codepath/ios_guides/wiki)
+- [Best practices for the beginner](https://github.com/futurice/ios-good-practices)
 
