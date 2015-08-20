@@ -448,9 +448,138 @@ In this chapter, we will describe the layers of components or services that are 
 
 ![Server application production stack chart](images/server_application_technology_stack.png)
 
+### Getting started
+
+In this chapter your will find all the informations you need to getting started with the project.
+
+###### Note: if you are not a developer, you might prefer to skip this part since it focuses on very technical aspects of the projects.
+
+1. Clone the elCurator repository.
+
+        $ git clone git@gitlab.octo.com:elcurator/web.git
+        $ cd web
+
+2. Install ruby using **rvm** or **rbenv**. See `Gemfile` file to know witch ruby version is needed.
+
+        $ rvm install 2.2.2
+    
+3. Install a postgres database.We recommend using the [graphical installer](http://www.postgresql.org/download/). Use the username **postgres** and the password **postgres**.
+
+4. Install gems with bundle. You may have to install bundler gem before.
+
+        $ gem install bundler
+        $ bundle install
+
+5. Create the `config/database.yml` file from `config/datbase.yml.example`.
+
+        $ cp config/database.yml.example config/database.yml
+
+6. Run database migration scripts.
+
+        $ rake db:create
+        $ rake db:migrate
+
+7. You need to be allowed to the elCurator heroku app before continuing. You also need the [heroku toolbelt](https://toolbelt.heroku.com/).
+
+        $ heroku login
+
+8. Import staging dataset in the local database.
+
+        $ rake db:drop
+        $ PGUSER=postgres PGPASSWORD=postgres heroku pg:pull DATABASE_URL elcurator --app elcurator-staging
+
+9. Create the `config/sunspot.yml` from `config/sunspot.yml.example`.
+
+        $ cp config/sunspot.yml.example config/sunspot.yml
+
+10. Start a server and reindex sunspot objects
+
+        $ foreman start
+        $ rake sunspot:solr:reindex
+           
+12. Configure Git to prepend commits with branch name
+    
+        $ curl https://gist.githubusercontent.com/jvenezia/57673140506ae9e330c2/raw/bff6973325b159254a3ba13c5cb9ac8fda8e382b/prepare-commit-msg.sh -o .git/hooks/prepare-commit-msg
+        $ chmod +x .git/hooks/prepare-commit-msg
+
+#### Starting a local server
+elCurator uses foreman to handle the needed processes.
+
+The following command will run a **puma web server**, a **worker**, a **rpush** notification worker, and a **sunspot solr server**.
+
+    $ foreman start
+
+`Procfile` file describes how foreman runs needed processes.
+
+In development mode, forman users `.env` file to setup environment variables.
+
+#### Starting the application in console mode
+    $ rails console
+    
+#### Running specs
+elCurator uses Rspec testing framework.
+
+To run all tests :
+
+    $ rake
+
+#### Running specs on multiple threads
+elCurator uses [parallel_tests](https://github.com/grosser/parallel_tests) gem to run specs on multiple threads.
+
+    $ rake parallel:create
+    $ rake db:migrate
+    $ rake parallel:prepare
+    $ rake parallel:spec
+
+#### Transferring heroku databases
+To import an heroku database in your local database:
+
+    $ rake db:drop
+    $ PGUSER=postgres PGPASSWORD=postgres heroku pg:pull DATABASE_URL elcurator --app elcurator-staging
+    $ rake db:migrate
+
+To push your local database in an heroku database ( **never do this in the production environment** ):
+
+    $ heroku maintenance:on -a elcurator-staging
+    $ heroku pg:reset -a elcurator-staging
+    $ heroku pg:push elcurator DATABASE_URL -a elcurator-staging
+    $ heroku run rake db:migrate -a elcurator-staging
+    $ heroku restart -a elcurator-staging
+    $ heroku maintenance:off -a elcurator-staging
+    
+To migrate an heroku database to another, pull the **source heroku database** in your **local database**, then push it to the **target heroku database**.
+
+### Known problems at installation
+
+#### Nokogiri
+If the nokogiri gem installation fails with bundler, install it manually with the following command before bundling again.
+Check if the needed version is correct.
+
+    $ gem install nokogiri -v '1.6.3.1' -- --use-system-libraries
+    
+#### Sunspot
+If you encounter some troubles with sunspot and solr:
+
+- The problem may be related with a [sunspot_rails issue](https://github.com/sunspot/sunspot/issues/504). Regenerate the solr files with the following commands:
+
+        $ spring stop
+        $ rm -fr solr
+        $ rake sunspot:solr:start
+        $ rake sunspot:solr:stop
+        $ git checkout solr/conf/schema.xml
+
+- If you encounter `RSolr::Error`/`OutOfMemoryError`, add the following lines under `development:solr:` in `config/sunspot.yml`, and increase their values if needed :
+
+        min_memory: 512M
+        max_memory: 1G
+
+- Double check by grep-ing your process list (`ps aux | grep solr`) to see if two instances are running and then shut down (`kill -9 PID`) that pid, that is not referenced by solr.pid
+
 ### Mobile application
 
 ![Mobile application stach chart](images/mobile_application_technology_stack.png)
+
+### Getting started
 
 ## Useful resources
 
@@ -458,18 +587,23 @@ In this chapter, we will describe the layers of components or services that are 
 
 - [Large scale agile tips by Hervé Lourdin (@USI by OCTO)](https://www.youtube.com/watch?v=OWzPjY2TVkk&feature=youtu.be)
 - [Slides about lean startup by Christopher Parola (@OCTOAcademy)](http://fr.slideshare.net/christopherparola/formation-lean-startup-octo-academy-lite)
+- [Lean startup feedbacks by Christopher Parola (@Lean startup experience)](https://www.youtube.com/watch?v=NfqENnfs55k)
 - [Clean code: a book about how to write good looking code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 
-### Mobile applications
+### Mobile application development
 
 #### Android
+- [Google material design specifications](http://www.google.com/design/spec/material-design/introduction.html)
+- [Official android training courses](https://developer.android.com/training/index.html)
 - [Learning guide](https://github.com/codepath/android_guides/wiki/Beginning-Android-Resources)
 - [Best practices for the beginner](https://github.com/futurice/android-best-practices)
 - [Awesome ui libraries list](https://github.com/wasabeef/awesome-android-ui)
 - [Another awesome libraries list](https://github.com/snowdream/awesome-android)
 - [How Facebook improved performances on Android with flatbuffers](https://code.facebook.com/posts/872547912839369/improving-facebook-s-performance-on-android-with-flatbuffers/)
+- [Android project template for testing](https://github.com/googlesamples/android-testing-templates)
 
 #### iOS
 - [Learning guide](https://github.com/codepath/ios_guides/wiki)
 - [Best practices for the beginner](https://github.com/futurice/ios-good-practices)
+- [NSHipster: last iOS developer news](http://nshipster.com/)
 
