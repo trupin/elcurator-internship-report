@@ -440,7 +440,7 @@ As we can see above, it is a process that relies on the repetition of a very sho
 
 At elCurator we think automated tests are extremely important. Most of the time, if you commit some untested code, it will be rejected at the *code review* step, and an experimented developer will ask you to implement them. Of course, we are aware that it is not an easy task, and you will find the necessary resources in our team or in OCTO Technology to learn how to efficiently test your code.
 
-## Technology stack
+## Application technical architecture
 
 In this chapter, we will describe the layers of components or services that are used to provide our website, our API and our mobile applications.
 
@@ -448,11 +448,45 @@ In this chapter, we will describe the layers of components or services that are 
 
 ![Server application production stack chart](images/server_application_technology_stack.png)
 
-### Getting started
+
+
+### Mobile applications
+
+Let's explain the mobile application needs a little:
+
+1. The user interactions should not be limited by the network avalaibilty. In other words, almost everything we can do online, we should be able to do it offline.
+	
+2. The user interactions should never be blocked because of a synchrone processing. In other words, our data processing should always be asynchronous.
+	
+3. The important application data should always synchronized with the server, even if when the user is not currently using the application.
+
+![Mobile application stach chart](images/mobile_application_technology_stack.png)
+
+The chart above represents how the different logical modules are interacting with each other. We designed our Android and iOS application by following the same constrainsts, which means this chart is applicable for both projects.
+
+How is this architecture good enough to answer to our technical constraints?
+
+1. **Offline mode**. To have the same logic between the online and offline mode, we need a local database. You must wonder, why the network cache is not enough. It is because we need to do logic on our data. We need a consistent relational storage in order to execute queries and do offline updates on it. This is not possible with a simple network cache because there is no way to know if it is consistent, it doesn't handle relations, and we cannot do offline updates on it.
+
+	We embedded an SQlite database in our application. On top of it, we put an object relational mapping (ORM). It permits to deal with plain model objects instead of dynamic data structures as dictionaries for example. The ORM also permits to do simple create/read/update/delete (CRUD) operations on our database, which really simplify our code logic when dealing with models. For iOS, we use [Coredata](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html), and for Android, [ActiveAndroid](http://www.activeandroid.com/).
+	
+	We implemented a networking service, which is requesting our server in a CRUD way (since our API is RESTful). The server responds with JSON data, which is not very easy to deal with, since it is a dynamic data structure. That's why our service is using a JSON mapping in order to be able to build a model from JSON data. For iOS, the networking service is implemented using [AFNetworking](https://github.com/AFNetworking/AFNetworking) and the JSON mapping using [JSONModel](https://github.com/icanzilb/JSONModel). For Android, we respectively use [RoboSpice](https://github.com/stephanenicolas/robospice) and [Jackson](http://wiki.fasterxml.com/JacksonRelease20).
+	
+	Since we can handle data coming from our API and our database the same way, we made logic managers, which are basically requesting fresh data from the server, storing these data into the database, and finally doing logic with it.
+
+2. **Asynchronous data flow**. In order to never block the UI, we needed to focus on asynchronousity. To be clear, we needed all our APIs to be asynchrone. The main issue with asynchronousity is data synchronisation. To solve this, we used the [promise pattern](https://en.wikipedia.org/wiki/Futures_and_promises). This means that each service and manager calls are returning a promise of result while pushing tasks on background threads. To do this, we use the [Bolts](https://github.com/BoltsFramework) framework, which is avalaible on both iOS and Android. For more details about this pattern, [this presentation](http://fr.slideshare.net/ThophaneRupin/bolts-framework) explains it pretty well.
+	
+	Bolts is actually not solving all our issues. The issue which is not solved here is; how can we be sure to have consistent data shown on the UI? To solve this, we only show the data coming from our database. Querying the databse every X milliseconds is not an option since it would be very bad for peformances. Instead, we observe the database cache, and only show the data coming from these observers. An observer isn't eavy since it is performing requests from a background thread and it does it only when the cache is udpating. For iOS, we implemented it using the [NSFectchedResultsController](https://developer.apple.com/library/ios/documentation/CoreData/Reference/NSFetchedResultsController_Class/) class. For Android, we used a custom [content provider](http://developer.android.com/guide/topics/providers/content-providers.html).
+	
+3. **Data synchronization between the server and the mobile applications**. When the user is currently using the application, we implemented the [swipe to refresh](https://www.google.com/design/spec/patterns/swipe-to-refresh.html) pattern so the data can be refreshed on demand. But when the user let the app running on background, we need the last shared articles, comments, etc... to be pushed inside the application. To perform this, we use the push notification, which are implemented on both iOS and Android. For example, when an article is shared, the server silently notifies the mobile applications that there is a new article to request, giving its remote id. The push notification handler then use the article manager to fetch the article data from the server and store it in the database.
+
+## Getting started
+
+### Server application
 
 In this chapter your will find all the informations you need to getting started with the server application.
 
-###### Note: if you are not a developer, you might prefer to skip this part since it focuses on very technical aspects of the projects.
+###### If you are not a developer, you might prefer to skip this part since it focuses on very technical aspects of the projects.
 
 1. Clone the elCurator repository.
 
@@ -575,17 +609,11 @@ If you encounter some troubles with sunspot and solr:
 
 - Double check by grep-ing your process list (`ps aux | grep solr`) to see if two instances are running and then shut down (`kill -9 PID`) that pid, that is not referenced by solr.pid
 
-### Mobile application
-
-![Mobile application stach chart](images/mobile_application_technology_stack.png)
-
-#### Android: Getting Started
+### Android application
 
 In this chapter your will find all the informations you need to getting started with the Android application.
 
-###### Note: if you are not a developer, you might prefer to skip this part since it focuses on very technical aspects of the projects.
-
-##### Run the application
+#### Run the application
 
 1. Clone the elCurator android repository
 
@@ -594,17 +622,17 @@ In this chapter your will find all the informations you need to getting started 
 		
 	###### We are using submodules, which is why you need to put the `--recursive` option when cloning.
 		
-2. [Download](https://developer.android.com/sdk/installing/index.html) and install android studio with the Android SDK Tools.
+2. [Download](https://developer.android.com/sdk/installing/index.html) and install Android Studio and the Android SDK Tools.
 
-3. [Download](https://www.genymotion.com/#!/store) and install Genymotion. This tool will permit you to setup and start using Android simulator much more easily and efficiently.
+3. [Download](https://www.genymotion.com/#!/store) and install Genymotion. This tool will permits to setup and start using the Android simulator much more easily and efficiently.
 
-4. Start Android Studio and click the *import project* button. This should find the *Gradle* configurations files and setup a working development environment for you.
+4. Run Android Studio and click on *import project*. This should find the *Gradle* configurations files and setup a working development environment for you.
 
 5. Start a Genymotion Android simulator or connect your Android device.
 
 	###### Don't forget to turn on the developer settings of your device before connecting it.
 
-6. Click on the *build variants* button in the left menu bar of Android Studio. There you should see in the left side bar a dropdown button permitting to choose the build variant you need to run. 
+6. Click on *build variants* in the left menu bar of Android Studio. In the left side bar, you should now see a dropdown button permitting to choose the currently used build variant. 
 
 	A **build variant** is a variant of your project's gradle configuration. If you look into the `app/build.gradle` file, you will see something like this:
 		
@@ -639,13 +667,16 @@ In this chapter your will find all the informations you need to getting started 
         }
     }
 	``` 
-	The elCurator application has 3 build variants. One for development for which the API host is a local address, one for staging for which the API host is the staging server address, and the last one for production, for which the API host is the production server address.
+	The elCurator application has 3 build variants:
+		- development for which the API host is a local address
+		- staging for which the API host is the staging server address
+		- production, for which the API host is the production server address.
 
-	So if you are running the elCurator server application on the local network, you can specify its address in the development build variant, otherwise, your can choose the staging build variant. 
+	So if you are running the elCurator server application on your local network, you can specify its address in the development build variant, otherwise, your can choose the staging build variant.
 	
 7. You can now run the application.
 
-##### Run the unit tests
+#### Run the unit tests
 
 1. Go to the left menu in Android Studio and click on *build variants*. You should see a *test artifacts* drop down button in the left side bar. There you can choose between Android *instrumentation tests* and *unit tests*. Choose *unit tests*.
 
@@ -653,7 +684,7 @@ In this chapter your will find all the informations you need to getting started 
 	
 2. In the file manager of Android Studio, right click on the `net.elcurator.android` package from the `test` directory and select *run tests in `net.elcurator.android`*.
 
-##### Release the application
+#### Release the application
 
 ###### Since the CI server is building a release package for each code version, you should never have to do it manually. Nevertheless, we prefer document how it is working under the hood so you are able to do it yourself in case the CI sever is down.
 
@@ -667,7 +698,7 @@ In this chapter your will find all the informations you need to getting started 
 
 5. Android Studio will generate a signed apk which you will be able to publish to the *Play store*.
 
-##### Install the staging application from the private elCurator Store.
+#### Install the staging application from the private elCurator Store.
 
 1. From your device, go to `https://1986-elcurator-store.appaloosa-store.com/1986-elcurator-store/mobile_applications?locale=fr` with Chrome.
 
@@ -677,7 +708,19 @@ In this chapter your will find all the informations you need to getting started 
 
 ###### You don't need to publish this APK yourself since the CI server is already doing it for each code version.
 
+## The developer role
+
+At elCurator, we see the developer as a central role in the project. In this chapter, we will focus on what we think of the developer role.
+
+
+
 ## Useful resources
+
+You will find here a non exaustive list of resourceful documents. It is very important to us that you quickly get a preview of the topics we are dealing with here at elCurator, and we think these documents can help.
+
+They are grouped by topic, then ordered by expertise level.
+
+###### If you find that a resource is not relevant, or you think you know one you could add, don't hesitate to let us know. Your feedbacks on this document will always be appreciated.
 
 ### Methodologies
 
@@ -702,4 +745,3 @@ In this chapter your will find all the informations you need to getting started 
 - [Learning guide](https://github.com/codepath/ios_guides/wiki)
 - [Best practices for the beginner](https://github.com/futurice/ios-good-practices)
 - [NSHipster: last iOS developer news](http://nshipster.com/)
-
