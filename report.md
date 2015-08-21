@@ -298,10 +298,9 @@ There are many topics to study, many metrics to observe, many skills to have, an
 
 In this chapter, you will learn our way of getting things done at elCurator.
 
-### Lean startup
+### [Lean startup](https://www.elcurator.net/en/curation)
 
-The lean startup is a method for developing businesses and products developped by Eric Ries in 
-2008, based on his experience in IT companies of the Silicon Valley.
+The lean startup is a method for developing businesses and products developped by Eric Ries in 2008, based on The Four Step to the Epiphany, written by Steve Blank, describing the lifecycle of a startup from the begining to success.
 
 #### How we do it
 
@@ -440,7 +439,7 @@ As we can see above, it is a process that relies on the repetition of a very sho
 
 At elCurator we think automated tests are extremely important. Most of the time, if you commit some untested code, it will be rejected at the *code review* step, and an experimented developer will ask you to implement them. Of course, we are aware that it is not an easy task, and you will find the necessary resources in our team or in OCTO Technology to learn how to efficiently test your code.
 
-## Application technical architecture
+## Application architecture
 
 In this chapter, we will describe the layers of components or services that are used to provide our website, our API and our mobile applications.
 
@@ -448,11 +447,42 @@ In this chapter, we will describe the layers of components or services that are 
 
 ![Server application production stack chart](images/server_application_technology_stack.png)
 
+#### Used technologies
 
+The server application architecture is based on one of the most famous web framework, *[Rails](http://rubyonrails.org/)*. It is a MVC framework, providing default structures for a database, a web service, and web pages.
+
+We use [PostgreSQL](http://www.postgresql.org/) for the relational data storage and [Solr](http://lucene.apache.org/solr/) for the search and recommendation requests.
+
+The HTTP server is [Puma](https://github.com/puma/puma), which is multithreaded and much more efficient than the default Rails HTTP server.
+
+One of the best advantages of Rails is that it is very well integrated with [Heroku](https://dashboard.heroku.com/) which is a hosting service we use for the staging and production server. Heroku is very powerful because it permits to plug many other services to a server and take care of the server administration for you. It also permits to package a server application and make it stateless so it can be scaled on plural workers at any time.
+
+The core logic uses several external services:
+
+- [SendGrid](https://sendgrid.com/) which is a service for sending and manage mails.
+- [Readability](https://www.readability.com/) which is used to extract the content of html pages.
+- [Intercom](https://www.intercom.io/) which is a client support plateform.
+- [Yammer](https://developer.yammer.com/docs/oauth-2) which is a private social network. We use it for authentication purposes only.
+- [Google](https://developers.google.com/identity/protocols/OAuth2) which you must know already. We also use it for authentication purposes only.
+- [Google analytics](http://www.google.com/intl/fr/analytics/premium/) which is the analytics engine of google. We use it to collect anonymous informations about our users.
+
+#### RESTful API
+
+As you can see in the diagram, our server application isn't only a webserver, but also has a **RESTful API**.
+
+REST stands for Representational State Transfer. It is an alternative to web services, such as SOAP and WSDL. It relies in the HTTP protocol for all the CRUD operations: create, read, update and delete. RESTful web services are appropriated when the web services are completely stateless, limited bandwidth, when the data is not generated dynamically so it could be cached to improve performance and when there is a mutual understanding between the service producer and the consumer. 
+
+This kind of API is a perfect fit for providing the application data to ou mobile applications.
+
+The API controllers are livind in the same environment then the web controllers. The principal difference is that an API controller renders JSON views with [JBuilder](https://github.com/rails/jbuilder) where a web controller renders regular views.
+
+To avoid breaking our clients when updating the API, we used version control method which consists to put the version number into the path of the API routes. For example, the articles route of the first version of our API is `/api/v1/shared_articles`.
 
 ### Mobile applications
 
-Let's explain the mobile application needs a little:
+#### Architecture constrainsts
+
+Let's explain the mobile application needs:
 
 1. The user interactions should not be limited by the network avalaibilty. In other words, almost everything we can do online, we should be able to do it offline.
 	
@@ -464,7 +494,7 @@ Let's explain the mobile application needs a little:
 
 The chart above represents how the different logical modules are interacting with each other. We designed our Android and iOS application by following the same constrainsts, which means this chart is applicable for both projects.
 
-How is this architecture good enough to answer to our technical constraints?
+#### Our solutions
 
 1. **Offline mode**. To have the same logic between the online and offline mode, we need a local database. You must wonder, why the network cache is not enough. It is because we need to apply logic on our data. We need a consistent relational storage in order to execute queries and do offline updates on it. This is not possible with a simple network cache because there is no way to know if it is consistent, it doesn't handle relations, and we cannot do offline updates on it.
 
@@ -708,17 +738,9 @@ In this chapter your will find all the informations you need to getting started 
 
 ###### You don't need to publish this APK yourself since the CI server is already doing it for each code version.
 
-## The developer role
-
-At elCurator, we see the developer as a central role in the project. In this chapter, we will focus on what we think of the developer role.
-
-
-
 ## Useful resources
 
 You will find here a non exaustive list of resourceful documents. It is very important to us that you quickly get a preview of the topics we are dealing with here at elCurator, and we think these documents can help.
-
-They are grouped by topic, then ordered by expertise level.
 
 ###### If you find that a resource is not relevant, or you think you know one you could add, don't hesitate to let us know. Your feedbacks on this document will always be appreciated.
 
@@ -728,6 +750,10 @@ They are grouped by topic, then ordered by expertise level.
 - [Slides about lean startup by Christopher Parola (@OCTOAcademy)](http://fr.slideshare.net/christopherparola/formation-lean-startup-octo-academy-lite)
 - [Lean startup feedbacks by Christopher Parola (@Lean startup experience)](https://www.youtube.com/watch?v=NfqENnfs55k)
 - [Clean code: a book about how to write good looking code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
+
+### Server application development
+- [Rails architecture](http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/)
+- [RESTful API best practices](http://blog.octo.com/en/design-a-rest-api/)
 
 ### Mobile application development
 
@@ -745,3 +771,9 @@ They are grouped by topic, then ordered by expertise level.
 - [Learning guide](https://github.com/codepath/ios_guides/wiki)
 - [Best practices for the beginner](https://github.com/futurice/ios-good-practices)
 - [NSHipster: last iOS developer news](http://nshipster.com/)
+
+## Thanks for reading
+
+We hope this document has been useful. We are very excited to have new people in our team. The fact that you read this entire document demonstrates you are motivated. It will probably be a good experience to have you with us then.
+
+As you must have read before, don't hesitate to give us your feedbacks about this document, so we can improve it.
