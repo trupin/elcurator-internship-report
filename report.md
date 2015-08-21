@@ -458,7 +458,7 @@ Let's explain the mobile application needs a little:
 	
 2. The user interactions should never be blocked because of a synchrone processing. In other words, our data processing should always be asynchronous.
 	
-3. The important application data should always synchronized with the server, even if when the user is not currently using the application.
+3. The important application data should always be synchronized with the server, even if the user is not currently using the application.
 
 ![Mobile application stach chart](images/mobile_application_technology_stack.png)
 
@@ -466,7 +466,7 @@ The chart above represents how the different logical modules are interacting wit
 
 How is this architecture good enough to answer to our technical constraints?
 
-1. **Offline mode**. To have the same logic between the online and offline mode, we need a local database. You must wonder, why the network cache is not enough. It is because we need to do logic on our data. We need a consistent relational storage in order to execute queries and do offline updates on it. This is not possible with a simple network cache because there is no way to know if it is consistent, it doesn't handle relations, and we cannot do offline updates on it.
+1. **Offline mode**. To have the same logic between the online and offline mode, we need a local database. You must wonder, why the network cache is not enough. It is because we need to apply logic on our data. We need a consistent relational storage in order to execute queries and do offline updates on it. This is not possible with a simple network cache because there is no way to know if it is consistent, it doesn't handle relations, and we cannot do offline updates on it.
 
 	We embedded an SQlite database in our application. On top of it, we put an object relational mapping (ORM). It permits to deal with plain model objects instead of dynamic data structures as dictionaries for example. The ORM also permits to do simple create/read/update/delete (CRUD) operations on our database, which really simplify our code logic when dealing with models. For iOS, we use [Coredata](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html), and for Android, [ActiveAndroid](http://www.activeandroid.com/).
 	
@@ -478,7 +478,7 @@ How is this architecture good enough to answer to our technical constraints?
 	
 	Bolts is actually not solving all our issues. The issue which is not solved here is; how can we be sure to have consistent data shown on the UI? To solve this, we only show the data coming from our database. Querying the databse every X milliseconds is not an option since it would be very bad for peformances. Instead, we observe the database cache, and only show the data coming from these observers. An observer isn't eavy since it is performing requests from a background thread and it does it only when the cache is udpating. For iOS, we implemented it using the [NSFectchedResultsController](https://developer.apple.com/library/ios/documentation/CoreData/Reference/NSFetchedResultsController_Class/) class. For Android, we used a custom [content provider](http://developer.android.com/guide/topics/providers/content-providers.html).
 	
-3. **Data synchronization between the server and the mobile applications**. When the user is currently using the application, we implemented the [swipe to refresh](https://www.google.com/design/spec/patterns/swipe-to-refresh.html) pattern so the data can be refreshed on demand. But when the user let the app running on background, we need the last shared articles, comments, etc... to be pushed inside the application. To perform this, we use the push notification, which are implemented on both iOS and Android. For example, when an article is shared, the server silently notifies the mobile applications that there is a new article to request, giving its remote id. The push notification handler then use the article manager to fetch the article data from the server and store it in the database.
+3. **Data synchronization between the server and the mobile applications**. We implemented the [swipe to refresh](https://www.google.com/design/spec/patterns/swipe-to-refresh.html) pattern so the data can be refreshed on demand on the user. This if great when the user is using the applicatoin, but when he lets it running on the background, it still needs the last shared articles, comments, etc... to be up to date. To perform this, we use the push notification handler, which is implemented on both iOS and Android. For example, when an article is shared, the server silently notifies the mobile applications that there is a new article to request, giving its remote id. The push notification handler then use the article manager to fetch the article data from the server and store it in the database.
 
 ## Getting started
 
