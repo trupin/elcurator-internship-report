@@ -316,6 +316,11 @@ At elCurator, we are trying to apply the following terminologies as much as poss
 
 ![Build measure learn loop](images/build_measure_learn_loop.jpg)
 
+To simplify things, we like to say:
+
+- *Lean = continuous learning*
+- *I don't think, I measure*
+
 #### Why do we need to be lean?
 
 We are a little team. We don't have many resources. We work on a high risk product, since we still don't know if we will be able to make monney with it. For all these reasons, we need to learn from our users to find our place on the market. We are convinced lean startup is a very efficient methodology to do it.
@@ -345,21 +350,19 @@ At elCurator, we are trying to apply the following principles as much as possibl
 
 #### Why do we need to be agile?
 
-Almost for same reasons as we need to be lean. We need flexibility because we don't know our market very well yet. We need to adapt very quickly to our clients demands.
+Agile methodologies permits to produce code quality, continuousy improve our process, and always adapt our organization to the problematics. All of this is essential discover and learn about our product ecosystem. We could say that agile and lean start-up are complementary.
 
 ### Production workflow
 
-#### Trello, our virtual Kanban
+#### Kanban
 
 Kanban is a system to control the logistical chain from a production point of view, and is an inventory control system. Kanban was developed by Taiichi Ohno, an industrial engineer at Toyota, as a system to improve and maintain a high level of production.
 
-For practical reasons, we are using a virtual Kaban thanks to a tool called [Trello](https://trello.com/).
-
 ##### Columns
 
-Trello is a task manager which permits to regroup our tasks inside named columns. The Kanban is read from left to right. Each column represent a step of our process. The higher is a task in a column, the higher is its priority.
+The Kanban is read from left to right. Each column represent a step of our process. The higher is a task in a column, the higher is its priority.
 
-![Virtual Kanban](images/android_virtual_kanban.png)
+![Kanban example](images/kanban.jpg)
 
 ##### Tasks
 
@@ -367,11 +370,15 @@ Each task correspond to the most minimalist feature we can describe. If we obser
 
 After a task has been created and put into the Kanban, someone can be assigned to it. If someone doesn't have any assigned task, he can assign himself to the higher one in the column corresponding to its role.
 
-![Virtual Kanban task](images/virtual_kanban_task.png)
+#### Trello, a virtual Kanban
+
+For practical reasons, we are using a tool called [Trello](https://trello.com/) which permits to handle tasks the same way we would do it on a kanban.
+
+![Virtual Kanban task](images/android_virtual_kanban.png)
 
 #### From the ideas to production ready features
 
-The chart below explains how we actually use our virtual Kanban.
+The chart below explains how we actually use our Kanban.
 
 ![Production workflow chart](images/development_process_chart.png)
 
@@ -391,7 +398,7 @@ The chart below explains how we actually use our virtual Kanban.
 
 7. **Released**. This is an historic of the features which have been released and for which the code is currently in production.
 
-###### Notice how we arranged this workflow to make it as agile and lean as possible. The releases are continuous, which means we try to push our code in production as soon as a feature is ready. The *validated* buffer is only here in case the release is technically impossible, so the process is not stopped. Right after a problem is detected, it is immediately communicated and put backward in the process so it can be fixed as soon as possible.
+###### Notice how we arranged this workflow to make it as agile and lean as possible. The releases are continuous, which means we try to push our code in production as soon as a feature is ready. The *validated* buffer is only here in case the release is technically impossible, so the process is not stopped. Right after a problem is detected, it is immediately communicated and put backward in the process so it can be fixed as soon as possible. Of course, the workflow wasn't like this at the begining of the project. We improved it little by little to obtain the process we have today, and we are sure it will evolve in the future.
 
 ### Continuous integration
 
