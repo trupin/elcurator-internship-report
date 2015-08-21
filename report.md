@@ -12,7 +12,9 @@ This document is obviously targeting the developers, but we put all our efforts 
 
 ## A startup inside OCTO Technology
 
-It is actually quite complex to explain what is our working environment. What is OCTO Technology and is it related to us? Are we an independant company or not? Who is investing in us? We will try to clarify these points in this chapter.
+It is actually quite complex to explain what is our working environment. What is OCTO Technology and how is it related to us? Are we an independant company or not? Who is investing? 
+
+We try to clarify these points in this chapter.
 
 ### What is OCTO Technology?
 
@@ -27,9 +29,9 @@ There is a way of doing things at OCTO which pushes its employees to think about
 
 ### From the one day hacking project, to the affiliated company
 
-ElCurator is a product which was **initiated by two consultants of OCTO Technology** in 2012 during a particular day called the OCTO day. This event is happening once a year, and is aimed to let every employees work on whatever they want, as long as it is useful to the company.
+ElCurator is a product which was **initiated by two consultants of OCTO Technology** in 2012, during a particular day called the OCTO day. This event is happening once a year, and is aimed to let every employees work on whatever they want, as long as it is useful to the company.
 
-That day, **Christopher Parola** - now CEO of the company - started the project with several workmates, and in one day of work, they tried to make a prototype. This was a failure since it wasn't working as expected, and Christopher continued to work on it on his free time. **Jeremy Venezia** - now CTO of the company - joined him several weeks after that, and helped him in his task. The product began to work, and a few consultants at OCTO started using it. With time, more and more people were using it, and Christopher and Jeremy decided to **deploy it to the whole company**. Maintaining the project was taking to much time, and the two consultants asked to be full-time working on it. That's how elCurator began to live, as a project funded by OCTO Technology. In June 2014, the project has been **publicly released** and OCTO Technology started to communicate on it in order to sell it to other companies (mainly to its own clients). In January 2015, the project has been **affiliated**, and it became a company named **elCurator SAS**.
+That day, **Christopher Parola** - now CEO of the company - started the project with several workmates, and in one day of work, they tried to make a prototype. This was a failure since it was not working as expected, and Christopher continued to work on it on his free time. **Jeremy Venezia** - now CTO of the company - joined him several weeks after that, and helped him in his task. The product began to work, and a few consultants at OCTO started using it. With time, more and more people were using it, and Christopher and Jeremy decided to **deploy it to the whole company**. Maintaining the project was taking to much time, and the two consultants asked to be full-time working on it. This is how elCurator began to live, as a project funded by OCTO Technology. In June 2014, the project has been **publicly released** and OCTO Technology started to communicate on it in order to sell it to other companies (mainly to its own clients). In January 2015, the project has been **affiliated**, and it became a company named **elCurator SAS**.
 
 ### Are we a startup?
 
@@ -72,11 +74,11 @@ This extra help is very important because it provides us some kinds of framework
 
 ## The product
 
-We talked about the company's situation, but we haven't explained the activity of elCurator. What are we actually doing here? As you must have understood, elCurator SAS is a software company developping and selling a product named elCurator. In this chapter, you will find the informations you need about the product to easily understand and start manipulating it. We think each members of our team should be capable of explaining the product, and talking about it outside our walls.
+We talked about the company's situation, but we have not explained the activity of elCurator. What are we actually doing here? As you must have understood, elCurator SAS is a software company developing and selling a product named elCurator. In this chapter, you will find the informations you need about the product to easily understand and start manipulating it. We think each members of our team should be capable of explaining the product and talking about it outside our walls.
 
 ### The concept
 
-ElCurator is a **collaborative [curation](https://en.wikipedia.org/wiki/Digital_curation) platform**. In other words, our mission is to encourage workmates to share high quality contents in their company, and highlight the best shared contents.
+ElCurator is a **collaborative [curation](https://www.elcurator.net/en/curation) platform**. In other words, our mission is to encourage workmates to share high quality contents in their company, and highlight the best shared contents.
 
 The concept is defined by 3 main steps:
 
@@ -86,18 +88,18 @@ The concept is defined by 3 main steps:
 
 ### Why our clients need us?
 
-Since June 2014, when we publicly launched our product, we started recognizing our clients. Obviously, we are targetting medium and large businesses. Our strategy is mainly a B2B (business to business) strategy. Some functionalities are B2C (business to client) oriented, but the goal is always to be more relevant to large companies by being more famous on the market.
+Since June 2014, when we publicly launched the product, we started recognizing our clients. Obviously, we are targetting medium and large businesses. Our strategy is mainly a B2B (business to business) strategy. Some functionalities are B2C (business to client) oriented, but the goal is always to be more relevant to large companies by being more famous on the market.
 
-So far we identified that our product is a good fit for medium digital and consulting agencies, education organizations, and large banks. For each kind of client, we noticed several needs that we are able to fit:
+So far, we identified that our product is a good fit for medium digital and consulting agencies, education organizations, and large banks. For each kind of client, we noticed several needs that we are able to fit:
 
-* **Stop infobesity**. It is nowadays a fact that we receive too many informations by mail at work. If your workmates are sending you their curated content by mail, there are good chances that you ignore it because you have plenty of more important mails to treat. We believe there should be a time for treating mails, and a time for curation in a work day, and that's exactly what elCurator permits to do.
+* **Stop infobesity**. It is nowadays a fact that we receive too many informations by mail at work. If your workmates are sending you their curated content by mail, there are good chances that you ignore it because you have plenty of more important mails to treat. We believe there should be a time for treating mails, and a time for curation in a work day, and this is exactly what elCurator permits to do.
 * **Identify and highlight experts**. It can be difficult for managers to see who is expert on what topic. Thanks to elCurator, it is very easy to identify them by checking what they are sharing.
-* **Collective knowledge capitalization**. The content of the company is saved by the our platform. ElCurator
+* **Collective knowledge capitalization**. The content of the company is saved and the users can peform searches and follow the platform's recommendations to navigate between articles.
 * **Continuous formation**. Every workmates can easily reach expert contents and quickly start developing new skills.
 
 ### The main features
 
-If you need to work on elCurator, you need to know what are the main features, so you realize what are the main use cases of our product.
+If you are going to work at elCurator, you need to know what are the product main features, so you realize what are its main use cases.
 
 Elcurator is made of several tools:
 
@@ -106,19 +108,19 @@ Elcurator is made of several tools:
 
 #### User story: the web platform
 
-Because features list wouldn't be very attractive to read, let's tell a user story.
+Because a features list would not be very attractive to read, let's tell a user story.
 
-Manu is a project manager. He knows its workmates are read plenty of articles on the we every day, but keep it for them. He is desperate because his team as a pretty high turnover, and each time someone is leaving, he knows that all his expertise is leaving with him.
+Manu is a project manager. He knows its workmates read many articles every day, but keep it for them. He is desperate because his team as a pretty high turnover, and each time someone is leaving, he knows that all his expertise is leaving with him.
 
-Manu needs a solution. He needs to convince his workmates to share their knowledge alltogether. Most of all, he needs to store this knowledge, so the new recruits can take advantage of it when they arrive in the team.
+Manu needs a solution. He needs to convince his workmates to **share** their knowledge together. Most of all, he needs to **store** this knowledge, so the new recruits can take advantage of it when they start working in the team.
 
-Searching on the web, Manu types *best curation tool* on Google, and come to the elCurator landing page. It's said it's free for one organization made of less than 20 users. Eureka! Manu clicks on the *'create an account'*.
+Searching on the web, Manu types *best curation tool* on Google, and come to the elCurator's landing page. It is said; **free for one organization made of less than 20 users**. Eureka! Manu clicks on the *'create an account'*.
 
 ##### Create an account
 
 ![Create an account](images/user_story/elcurator_create_account.png)
 
-There are 3 ways to of openning an account:
+There are 3 ways of openning an account:
 
 1. Using an existing Google account.
 2. Using an existing Yammer account.
@@ -153,7 +155,7 @@ From here, he can:
 4. Tag an article.
 5. When he will have too many articles in the list, he will be able to search into its article contents.
 
-This list is designed to be like a todo list. The goal is to read the articles Manu put into it, then trash it, or classify it.
+######This list is designed to be like a todo list. The goal is to make the users read the articles they stored, then trash it, or classify it.
 
 ##### The reading page
 
@@ -161,7 +163,9 @@ Manu wants to read his article. He clicks on the card, and here is what he sees.
 
 ![Reading page](images/user_story/article_reading_page.png)
 
-On this page, he find the article content. Notice that elCurator applied his own design to improve the readability.
+On this page, he finds the article content. 
+
+######Notice that elCurator applied his own design to improve the readability.
 
 He also can:
 
@@ -174,7 +178,7 @@ Manu can easily store and consult his personal articles, but now he would like t
 
 No worries, we are coming to it!
 
-To be able to share content on the platform, Manu needs to invite his workmates. But to what? 
+To be able to share content on the platform, Manu needs to invite his workmates. But to what?
 Manu finds the *create a crew* button just below the elCurator's logo in the navigation bar.
 What we call a crew is actually a group of collaborators. Manu creates a crew named *Eldorado*. He is now **administrator** of his own crew.
 
@@ -185,12 +189,14 @@ Right after creating his crew, he is redirected to the page below.
 Here he discovers what he can do with his crew:
 
 1. Create **categories**. Remember that we want to be able to easily find relevant contents shared by people who won't necessary tag their content the same way. That's why we force the administrator to create categories in order to oblige his crew members to follow an editorial policy.
-2. Share an article with his crew members.
-3. Invite his workmates to do the same.
+2. **Share an article** with his crew members.
+3. **Invite his workmates** to do the same.
 
 ##### Share an article to a crew
 
-Manu creates several categories and comes back to his article to read. Now he has created a crew, he can click on the *share* button to share his article to the *Eldorado* crew. Notice he could have done the same by clicking on the *+* button on the right of the navbar.
+Manu creates several categories and comes back to his article to read. Now he has created a crew, he can click on the *share* button to share his article to the *Eldorado* crew. 
+
+######Notice he could have done the same by clicking on the *+* button on the right of the navigation bar.
 
 ![Shared article form](images/user_story/elcurator_shared_article_form.png)
 
@@ -199,7 +205,7 @@ Manu has to fill several fields:
 1. The article title.
 2. The article description.
 3. The article category.
-4. Finally he can choose to ask to elCurator to extract the content as a text, or to take a screenshot of the webpage. The screendshot it usually used when you want to share a graphical content which can't be extracted.
+4. Finally, he can choose to ask elCurator to extract the content as a text, or to take a screenshot of the webpage. The screenshot is usually used when you want to share a graphical content which cannot be properly extracted.
 
 ##### Improve the article's visibility
 
@@ -211,19 +217,21 @@ Here he can:
 
 1. Add tags.
 2. Recommend it to a member of his crew.
-3. Share it to what we call the *world*. It is a public list of articles. When this option is enabled, the article is still shared to the Manu's crew, but it's also visible in the *world list* by to all the elCurator's users.
+3. Share it to what we call the *world*. It is a public list of articles. When this option is enabled, the article is still shared to the Manu's crew, but it is also visible in the *world list* by to all the elCurator's users.
 4. Share it by email, Twitter, Google+, etc...
 
 ##### The crew's list
 
-Manu then click on the *back* button in the navigation bar and is goes to its crew's list.
+Manu clicks on the *back* button in the navigation bar and goes to its *crew's list*.
 
 ![The crew's list](images/user_story/elcurator_crew_home_page.png)
 
-This page is one of the most important of the application. Here he can find back the article he just shared to his crew. On this page, Manu notices few things:
+This page is one of the most important of the application. Here he can find back the article he just shared to his crew.
 
-1. The rate count. When the members of his crew are going to read the article, they will be able to give it a point if they liked it. The number of *likes* is shown here. When the flag is green, it means the current user can rate the article, but when it's grey, it means the he is the sharing's author, which means he cannot give a point to himself.
-2. The category. As we said, every article must be categorized. The article's category is shown here. Each categories has a specific color.
+On this page, Manu notices few things:
+
+1. The *rate count*. When the members of his crew are going to read the article, they will be able to give it a point if they liked it. The number of *likes* is shown here. When the flag is green, it means the current user can rate the article, but when it is grey, it indicates he is the sharing's author, which means he cannot give a point to himself.
+2. The *category*. As we said, every article must be categorized. The article's category is shown here. Each categories has a specific color.
 3. The *read later* button permits to the members of Manu's crew to put it in their *to read list*. We think our users have rarely the time to read immediately the content of an article. The to *read later* button is here to encourage them not to forget it, and read it later.
 4. A new kind of card which represents his rank among his crew's users. This rank is calculated with the number of rates and readers he had so far.
 5. The *search bar* on which he finds a way to filter by category and keywords. He can also hide or show the read articles. And he can order the list by date, read count or popularity.
@@ -245,9 +253,9 @@ This list is the same as the crew's list except it only contains the publicly sh
 
 ##### Installation
 
-Now that Manu knows how to use the platform, we wonders; what if I want to be notified on my mobile when I receive an article? and what if I want to read some content in the subway?
+Now that Manu knows how to use the platform, we wonders; what if I want to be notified on my mobile when I receive an article? What if I want to read some content in the subway?
 
-Since he has an Android phone, he goes to the Play Store and search for elCurator.
+Since he has an Android phone, he goes to the Play Store and searches elCurator.
 
 ![Play store](images/user_story/elcurator_play_store_page.png)
 
@@ -255,7 +263,7 @@ He installs the elCurator's application on his smartphone.
 
 ##### Login
 
-When launching the application for the first time, Manu get the login page.
+When launching the application for the first time, Manu gets the login page.
 
 ![Android login page](images/user_story/elcurator_mobile_login.png)
 
@@ -266,7 +274,7 @@ Just like on the website, Manu can login using:
 
 ##### Navigation
 
-Manu logs in the application via his Google account and arrives on the *to read* list. He finds almost the same graphics elements than on the website.
+Manu signs in the application via his Google account and arrives on the *to read* list. He finds almost the same graphics elements than on the website.
 
 ![Android navigation](images/user_story/elcurator_mobile_navigation.png)
 
@@ -274,7 +282,7 @@ Has we can see above, the application permits him to navigate to the *world list
 
 ##### Add an article
 
-Manu his now leaving his workplace. He starts reading an article on his phone in the elevator, but doesn't have much time to finish. He can put his article in his *to read list* like below.
+Manu is now leaving his workplace. He starts reading an article on his phone in the elevator, but doesn't have much time to finish. He can put his article in his *to read list* like below.
 
 ![Android add article to read](images/user_story/elcurator_mobile_add_article_to_read.png)
 
@@ -282,31 +290,31 @@ Manu his now leaving his workplace. He starts reading an article on his phone in
 
 ##### Offline access
 
-Manu is now in the subway. He wants to continue to read his article in elCurator. Since all the content shown in the application is immediately accessible offline, he can continue find back his article in his *to read list* and continue to read without even noticing he lost his network access.
+Manu is now in the subway. He wants to continue to read his article in elCurator. Since all the content shown in the application is immediately accessible offline, he can find back his article in his *to read list* and continue to read without even noticing he has actually lost his network access.
 
 ###### Note: almost every features are also accessible offline in the mobile application.
 
 #### User story: the end
 
-Manu is now an happy manager since he has setup an engaging sharing policy in his workteam. His workmates are now able to share their knowledge alltogether, and Manu can even see the statistics of his crew in order to measure if elCurator is efficient or not.
+Manu is now an happy manager since he has setup an engaging sharing policy in his workteam. His workmates are now able to share their knowledge together, and Manu can even see the statistics of his crew in order to measure if elCurator is efficient or not.
 
 ## Our methodologies
 
-Developing a product with many use cases like elCurator isn't an easy task. We need to be focused on development quality, client support, our marketing image, finding clients, etc.
+Developing a product with many use cases like elCurator is not an easy task. We need to be focused on development quality, client support, our marketing image, finding clients, etc.
 
-There are many topics to study, many metrics to observe, many skills to have, and we would be lost in less than a week if we weren't applying few methodologies.
+There are many topics to study, many metrics to observe, many skills to have, and we would be lost in less than a week if we were not applying few methodologies.
 
 In this chapter, you will learn our way of getting things done at elCurator.
 
-### [Lean startup](https://www.elcurator.net/en/curation)
+### Lean startup
 
-The lean startup is a method for developing businesses and products developped by Eric Ries in 2008, based on The Four Step to the Epiphany, written by Steve Blank, describing the lifecycle of a startup from the begining to success.
+The lean startup is a method for developing businesses and products developped by Eric Ries in 2008. He actually based his work on The Four Step to the Epiphany, written by Steve Blank, which describes the lifecycle of a startup from the begining to success.
 
 #### How we do it
 
-At elCurator, we are trying to apply the following terminologies as much as possible:
+We are trying to apply the following terminologies as much as possible:
 
-- **Minimum viable product**. It is the version of a new product which allows a team to collect the maximum amount of validated learning about customers with the least effort. ElCurator actually began by a MVP which as been then improved step by step.
+- **Minimum viable product**. It is the version of a new product which allows a team to collect the maximum amount of validated learning about customers with the least effort. ElCurator actually began by a MVP which has been then improved step by step.
  
 - **Continuous deployment**. It is a process whereby all code that is written for an application is immediately deployed into production. We are using specifics workflows and tools in order to be able to continuously deploy the code. This will be described later in this document.
 
@@ -323,34 +331,34 @@ To simplify things, we like to say:
 
 #### Why do we need to be lean?
 
-We are a little team. We don't have many resources. We work on a high risk product, since we still don't know if we will be able to make monney with it. For all these reasons, we need to learn from our users to find our place on the market. We are convinced lean startup is a very efficient methodology to do it.
+We are a little team. We do not have many resources. We work on a high risk project, since we still don't know if we will be able to make monney with it. For all these reasons, we need to learn from our users to find our place on the market. We are convinced lean startup is a very efficient methodology to do it.
 
 ### Agilility
 
-Agile software development is a group of software development methods in which solutions evolve through collaboration between self-organizing,[1] cross-functional teams. It promotes adaptive planning, evolutionary development, early delivery, continuous improvement, and encourages rapid and flexible response to change.
+Agile software development is a group of software development methods in which solutions evolve through collaboration between self-organizing and cross-functional teams. It promotes adaptive planning, evolutionary development, early delivery, continuous improvement, and encourages rapid and flexible response to change.
 
 #### How we do it
 
 At elCurator, we are trying to apply the following principles as much as possible:
 
-- **Iterative**, **incremental** and **evolutionary** planning. To apply this, we use a virutal *Kanban*. 
+- **Iterative**, **incremental** and **evolutionary** planning. To apply this, we use a *Kanban*. 
 
 - Efficient and **face-to-face communication**. At elCurator, we are used to do several recurrent meetings:
 	
-	- **Standup**. Every morning at 10am, we stands up and each teammate explains what he did yesterday and what he will be doing today.
-	- **Restrospective**. Every two weeks, we meet in a room in order to observe what's going great and what's going wrong in the team and to find a way to resolve what's doing wrong.
+	- **Standup**. Every morning at 10am, we stand up and each teammate explains what he did yesterday and what he will be doing today.
+	- **Restrospective**. Every two weeks, we meet in a room in order to observe what is going great and what is going wrong in the team. We also try to find a way of resolving issues.
 	- **Team building**. For example, we assisted to a workshop where our goal was to design our own desks.
-	- **Brown bag lunch (BBL)**. When we have an extra topic to discuss, we do on our lunch time.
+	- **Brown bag lunch (BBL)**. When we have an extra topic to discuss, we do it on our lunch time. This permits not to be only focused on the project all the time. Sometimes it feels good to see what is happening around us.
 
-	We are all working in the same open space and everybody is almost continuously avalaible.
+	We are all working in the same open space and everybody is almost continuously available.
 	
 - Very **short feedback loop** and adaptation cycle.
 
-- **Quality** focus. We believe that quality code means quality product. All the code our developers are writing is reviewed by at least one different developer. If the code quality related to a task is not good enough, then it isn't considered as done.
+- **Quality** focus. We believe that quality code means quality product. All the code our developers are writing is reviewed by at least one confirmed developer. If the code quality related to a task is not good enough, then it cannot be considered as done.
 
 #### Why do we need to be agile?
 
-Agile methodologies permits to produce code quality, continuousy improve our process, and always adapt our organization to the problematics. All of this is essential discover and learn about our product ecosystem. We could say that agile and lean start-up are complementary.
+Agile methodologies permits to produce quality code, to continuousy improve our process, and always adapt our organization to the problematics. All of this is essential to discover and learn about our product ecosystem. In fact, agile and lean start-up are complementary.
 
 ### Production workflow
 
@@ -366,13 +374,13 @@ The Kanban is read from left to right. Each column represent a step of our proce
 
 ##### Tasks
 
-Each task correspond to the most minimalist feature we can describe. If we observed that a done task is producing an abnormal behaviour on the application, we labelize it as a bug or a crash.
+Each task corresponds to the most minimalist feature we can describe. If we observed that a done task is producing an abnormal behaviour on the application, we put a bug or crash label on it.
 
-After a task has been created and put into the Kanban, someone can be assigned to it. If someone doesn't have any assigned task, he can assign himself to the higher one in the column corresponding to its role.
+After a task has been created and put into the Kanban, someone can be assigned to it. If someone does not have any assigned task, he can assign himself to the higher one in the column corresponding to its role.
 
 #### Trello, a virtual Kanban
 
-For practical reasons, we are using a tool called [Trello](https://trello.com/) which permits to handle tasks the same way we would do it on a kanban.
+For practical reasons, we are using a tool called [Trello](https://trello.com/) which permits to handle tasks the same way we would do it on a physical kanban.
 
 ![Virtual Kanban task](images/android_virtual_kanban.png)
 
@@ -382,7 +390,7 @@ The chart below explains how we actually use our Kanban.
 
 ![Production workflow chart](images/development_process_chart.png)
 
-1. **Backlog**. When an idea emerge, Christopher describes it as a feature and put it in the *backlog* at the right priority level.
+1. **Backlog**. When an idea emerges, Christopher describes it as a feature and put it in the *backlog* at the right priority level.
 
 2. **To do**. As soon as we starts to implement a feature, Christopher takes the highest task from the *backlog*, and puts it in the *to do* column of the Kanban. If the task is too eavy, it is split into unitary tasks so it can be easily processed by the development team.
 
@@ -392,46 +400,46 @@ The chart below explains how we actually use our Kanban.
 
 	If the code is not good enough, the task is put back in the *to do* column, and the concerned developer will have to fix it.
 	
-5. **Done**. If the code is good enough, the task goes into the *done* column. Christopher is in charge of validating the features of this column. If it is all good, it goes to the next step, otherwise, it come back to the *to do* column.
+5. **Done**. If the code is good enough, the task goes into the *done* column. Christopher is in charge of validating the features of this column. If it is all good, it goes to the next step, otherwise, it comes back to the *to do* column.
 
 6. **Validated**. This column is a buffer where all the production ready features are stacked, waiting to be released. When a release is done, all these features are going to the *released* column.
 
 7. **Released**. This is an historic of the features which have been released and for which the code is currently in production.
 
-###### Notice how we arranged this workflow to make it as agile and lean as possible. The releases are continuous, which means we try to push our code in production as soon as a feature is ready. The *validated* buffer is only here in case the release is technically impossible, so the process is not stopped. Right after a problem is detected, it is immediately communicated and put backward in the process so it can be fixed as soon as possible. Of course, the workflow wasn't like this at the begining of the project. We improved it little by little to obtain the process we have today, and we are sure it will evolve in the future.
+###### Notice how we arranged this workflow to make it as agile and lean as possible. The releases are continuous, which means we try to push our code in production as soon as a feature is ready. The *validated* buffer is only here in case the release is technically impossible, so the process is not stopped. Right after a problem is detected, it is immediately communicated and put backward in the process so it can be fixed as soon as possible. Of course, the workflow was not like this at the begining of the project. We improved it little by little to obtain the process we have today, and you can be sure it will evolve again in the future.
 
-### Continuous integration
+### Continuous integration server
 
-We saw that our production workflow is lean, and necessitates to be continuous. To continuously be able to push our code in production, we need to always be aware of the build state of the project. That's what the continuous integration is doing for us. 
+We saw that our production workflow is lean, and necessitates to be continuous. To continuously be able to push our code in production, we need to always be aware of the build state of the project. This is what the continuous integration server is doing for us. 
 
 ![Development workflow chart](images/continuous_integration_chart.jpg)
 
 Let's explain this chart a little:
 
-1. The developer commits his code and push it on the revision control server. At elCurator, we use Git, which is the most popular distributed revision control system.
+1. The developer commits his code and pushes it on the revision control server. At elCurator, we use [Git](https://git-scm.com/), which is the most popular distributed revision control system.
 
-2. For each revision, Git triggers the continuous integration (CI) server. At elCurator, our CI is a TeamCity server installed on a local server.
+2. For each revision, Git triggers the continuous integration (CI) server. At elCurator, our CI server is a [TeamCity](https://www.jetbrains.com/teamcity/) server installed on a local mac mini.
 
 3. The CI server is in charge of running several tasks:
 
-	- Configuration builds, in order to check if they are correctly building.
-	- A static code analysis, to check the code quality. For example, if a developer let an obvious error in his code, the code analyser is able to see it.
-	- The unit tests, which permit to know if the project core functions are still fit for use.
+	- **Configuration builds**, in order to check if they are correctly building.
+	- A **static code analysis**, to check the code quality. For example, if a developer let an obvious error in his code, the code analyser is able to see it.
+	- The **unit tests**, which permits to know if the project core functions are still fit for use.
 
 4. All these tasks outputs are stored in a report. If this report contains one or more failures, the CI server send an email to our development team and stops there. The mail contains the report so the developers can investigate. At elCurator, we use a plugin directly integrated in our code editor in order to be always aware of the build state, and to interact with the logs more easily.
 
 5. If everything is running without error, the CI server deploys the project. At elCurator, we have two deployment methods:
 
-	- Staging server. Our staging (pre-production) web server is hosted on Heroku. This service permits us to easily deploy to the server with a single command line. It was easy to make our CI server deploys the project on the staging web server that way.
-	- Staging mobile packaged application. The CI server is also configured to package our mobile application and deploy it on Appaloosa, which is a private application store provider.
+	- **Staging server**. Our staging (pre-production) web server is hosted on Heroku. This service permits us to easily deploy to the server with a single command line. It was easy to make our CI server deploys the project on the staging web server that way.
+	- **Staging mobile packaged application**. The CI server is also configured to package our mobile application and deploy it on Appaloosa, which is a private application store provider.
 
-6. At this step, we have all the project is ready for functional tests. For bigger projects, automated functional tests are developed, so the CI server can run them. At elCurator we still do this part manually. It actually corresponds to the validation step of our production workflow.
+6. At this step, all the project is ready for functional tests. For bigger projects, automated functional tests are developed, so the CI server can run them. At elCurator we still do this part manually. It actually corresponds to the **validation step** of our production workflow.
 
 ###### Note: The staging web server and staging mobile applications are not only used for validation. They are also very useful to observe the project's state at any time. It is indeed very stimulating to be able to see what our team is producing, at least to be proud of our work, but also to be able to easily share our opinion about it.
 
 ### Test-driven development
 
-The continuous integration methodology is very important to us because this is our only way to know if the project is ready for production or not. And you must have noticed that this methodology cannot be efficient if we don't write automated tests.
+The continuous integration methodology is very important to us because this is our only way to know if the project is ready for production or not. And you must have noticed that this methodology cannot be efficient if we do not write automated tests.
 
 In order to be sure our developers are writing tests, we encourage them to use a development methodology called test-driven development (TDD). 
 
@@ -444,7 +452,7 @@ As we can see above, it is a process that relies on the repetition of a very sho
 3. And finally refactors the new code to acceptable standards.
 4. Repeat.
 
-At elCurator we think automated tests are extremely important. Most of the time, if you commit some untested code, it will be rejected at the *code review* step, and an experimented developer will ask you to implement them. Of course, we are aware that it is not an easy task, and you will find the necessary resources in our team or in OCTO Technology to learn how to efficiently test your code.
+At elCurator, we think automated tests are extremely important. Most of the time, if you commit some untested code, it will be rejected at the *code review* step, and an experimented developer will ask you to implement them. Of course, we are aware that it is not an easy task, and you will find the necessary resources in our team or in OCTO Technology to learn how to efficiently test your code.
 
 ## Application architecture
 
@@ -462,7 +470,7 @@ We use [PostgreSQL](http://www.postgresql.org/) for the relational data storage 
 
 The HTTP server is [Puma](https://github.com/puma/puma), which is multithreaded and much more efficient than the default Rails HTTP server.
 
-One of the best advantages of Rails is that it is very well integrated with [Heroku](https://dashboard.heroku.com/) which is a hosting service we use for the staging and production server. Heroku is very powerful because it permits to plug many other services to a server and take care of the server administration for you. It also permits to package a server application and make it stateless so it can be scaled on plural workers at any time.
+One of the best advantages of Rails is that it is very well integrated with [Heroku](https://dashboard.heroku.com/) which is a hosting service we use for the staging and production server. Heroku is very powerful because it permits to plug many other services to a server application and takes care of all the installations. It also permits to package a server application and make it stateless so it can be scaled on plural workers at any time.
 
 The core logic uses several external services:
 
@@ -475,15 +483,15 @@ The core logic uses several external services:
 
 #### RESTful API
 
-As you can see in the diagram, our server application isn't only a webserver, but also has a **RESTful API**.
+As you can see in the diagram, our server application is not only a webserver, but also a **RESTful API**.
 
 REST stands for Representational State Transfer. It is an alternative to web services, such as SOAP and WSDL. It relies in the HTTP protocol for all the CRUD operations: create, read, update and delete. RESTful web services are appropriated when the web services are completely stateless, limited bandwidth, when the data is not generated dynamically so it could be cached to improve performance and when there is a mutual understanding between the service producer and the consumer. 
 
 This kind of API is a perfect fit for providing the application data to ou mobile applications.
 
-The API controllers are livind in the same environment then the web controllers. The principal difference is that an API controller renders JSON views with [JBuilder](https://github.com/rails/jbuilder) where a web controller renders regular views.
+The API controllers are living in the same environment than the web controllers. The principal difference is that an API controller renders JSON views with [JBuilder](https://github.com/rails/jbuilder) where a web controller renders regular views.
 
-To avoid breaking our clients when updating the API, we used version control method which consists to put the version number into the path of the API routes. For example, the articles route of the first version of our API is `/api/v1/shared_articles`.
+To avoid breaking our clients when updating the API, we used a version control method which consists to put the version number into the path of the API routes. For example, the articles route of the first version of our API is `/api/v1/shared_articles`.
 
 ### Mobile applications
 
@@ -503,15 +511,15 @@ The chart above represents how the different logical modules are interacting wit
 
 #### Our solutions
 
-1. **Offline mode**. To have the same logic between the online and offline mode, we need a local database. You must wonder, why the network cache is not enough. It is because we need to apply logic on our data. We need a consistent relational storage in order to execute queries and do offline updates on it. This is not possible with a simple network cache because there is no way to know if it is consistent, it doesn't handle relations, and we cannot do offline updates on it.
+1. **Offline mode**. In order to have the same logic between the online and offline mode, we need a local database. You must wonder why the network cache is not enough. It is because we need to apply logic on our data. We need a consistent relational storage in order to execute queries and do offline updates on it. This is not possible with a simple network cache because there is no way to know if it is consistent or not, it does not handle relations, and we cannot do offline updates on it.
 
-	We embedded an SQlite database in our application. On top of it, we put an object relational mapping (ORM). It permits to deal with plain model objects instead of dynamic data structures as dictionaries for example. The ORM also permits to do simple create/read/update/delete (CRUD) operations on our database, which really simplify our code logic when dealing with models. For iOS, we use [Coredata](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html), and for Android, [ActiveAndroid](http://www.activeandroid.com/).
+	We embedded an SQlite database in our application. On top of it, we put an object relational mapping (ORM). It permits to deal with plain model objects instead of dynamic data structures like dictionaries for example. The ORM also permits to do simple create/read/update/delete (CRUD) operations on our database, which really simplify our code logic when dealing with models. For iOS, we use [Coredata](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreData/cdProgrammingGuide.html), and for Android, [ActiveAndroid](http://www.activeandroid.com/).
 	
 	We implemented a networking service, which is requesting our server in a CRUD way (since our API is RESTful). The server responds with JSON data, which is not very easy to deal with, since it is a dynamic data structure. That's why our service is using a JSON mapping in order to be able to build a model from JSON data. For iOS, the networking service is implemented using [AFNetworking](https://github.com/AFNetworking/AFNetworking) and the JSON mapping using [JSONModel](https://github.com/icanzilb/JSONModel). For Android, we respectively use [RoboSpice](https://github.com/stephanenicolas/robospice) and [Jackson](http://wiki.fasterxml.com/JacksonRelease20).
 	
-	Since we can handle data coming from our API and our database the same way, we made logic managers, which are basically requesting fresh data from the server, storing these data into the database, and finally doing logic with it.
+	Since we can handle data coming from our API and our database the same way, we made logic managers, which are basically requesting fresh data from the server, storing it into the database, and finally doing logic with it.
 
-2. **Asynchronous data flow**. In order to never block the UI, we needed to focus on asynchronousity. To be clear, we needed all our APIs to be asynchrone. The main issue with asynchronousity is data synchronisation. To solve this, we used the [promise pattern](https://en.wikipedia.org/wiki/Futures_and_promises). This means that each service and manager calls are returning a promise of result while pushing tasks on background threads. To do this, we use the [Bolts](https://github.com/BoltsFramework) framework, which is avalaible on both iOS and Android. For more details about this pattern, [this presentation](http://fr.slideshare.net/ThophaneRupin/bolts-framework) explains it pretty well.
+2. **Asynchronous data flow**. In order to never block the UI, we needed to focus on asynchronousity. To be clear, we needed all our interface implementations to be asynchronous. The main issue with asynchronicity is data concurrency. To solve this, we used the [promise pattern](https://en.wikipedia.org/wiki/Futures_and_promises). This means that each service and manager calls are returning a promise of result while pushing tasks on background threads. To do this, we use the [Bolts](https://github.com/BoltsFramework) framework, which is avalaible on both iOS and Android. For more details about this pattern, [this presentation](http://fr.slideshare.net/ThophaneRupin/bolts-framework) explains it pretty well.
 	
 	Bolts is actually not solving all our issues. The issue which is not solved here is; how can we be sure to have consistent data shown on the UI? To solve this, we only show the data coming from our database. Querying the databse every X milliseconds is not an option since it would be very bad for peformances. Instead, we observe the database cache, and only show the data coming from these observers. An observer isn't eavy since it is performing requests from a background thread and it does it only when the cache is udpating. For iOS, we implemented it using the [NSFectchedResultsController](https://developer.apple.com/library/ios/documentation/CoreData/Reference/NSFetchedResultsController_Class/) class. For Android, we used a custom [content provider](http://developer.android.com/guide/topics/providers/content-providers.html).
 	
