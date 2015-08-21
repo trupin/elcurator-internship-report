@@ -18,7 +18,7 @@ It is actually quite complex to explain what is our working environment. What is
 
 First of all, we should explain what is exactly **OCTO Technology**. You can find all the informations you need about this company on its [website](http://www.octo.com/en/who-we-are). Even though, we define OCTO Technology as an **IT consulting, design and implementation company**. Founded in 1998, OCTO is now employing 230 people in 5 coutries: France, Brazil, Switzerland, Morocco and Autralia. The OCTO community is mainly made up of IT consultants, and the main activity of OCTO is to guide and help realize its clients' projects.
 
-![Key figures of OCTO Technology for 2014](./images/octo_2014_numbers.png)
+![Key figures of OCTO Technology for 2014](images/octo_2014_numbers.png)
 
 There is a way of doing things at OCTO which pushes its employees to think about innovative concepts and develop them from inside the company. **That's how two products were born in the company**:
 
