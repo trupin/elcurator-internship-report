@@ -450,7 +450,7 @@ In this chapter, we will describe the layers of components or services that are 
 
 ### Getting started
 
-In this chapter your will find all the informations you need to getting started with the project.
+In this chapter your will find all the informations you need to getting started with the server application.
 
 ###### Note: if you are not a developer, you might prefer to skip this part since it focuses on very technical aspects of the projects.
 
@@ -579,7 +579,103 @@ If you encounter some troubles with sunspot and solr:
 
 ![Mobile application stach chart](images/mobile_application_technology_stack.png)
 
-### Getting started
+#### Android: Getting Started
+
+In this chapter your will find all the informations you need to getting started with the Android application.
+
+###### Note: if you are not a developer, you might prefer to skip this part since it focuses on very technical aspects of the projects.
+
+##### Run the application
+
+1. Clone the elCurator android repository
+
+		$ git clone --recursive git@gitlab.octo.com:elcurator/android.git 
+		$ cd android
+		
+	###### We are using submodules, which is why you need to put the `--recursive` option when cloning.
+		
+2. [Download](https://developer.android.com/sdk/installing/index.html) and install android studio with the Android SDK Tools.
+
+3. [Download](https://www.genymotion.com/#!/store) and install Genymotion. This tool will permit you to setup and start using Android simulator much more easily and efficiently.
+
+4. Start Android Studio and click the *import project* button. This should find the *Gradle* configurations files and setup a working development environment for you.
+
+5. Start a Genymotion Android simulator or connect your Android device.
+
+	###### Don't forget to turn on the developer settings of your device before connecting it.
+
+6. Click on the *build variants* button in the left menu bar of Android Studio. There you should see in the left side bar a dropdown button permitting to choose the build variant you need to run. 
+
+	A **build variant** is a variant of your project's gradle configuration. If you look into the `app/build.gradle` file, you will see something like this:
+		
+	```groovy
+	productFlavors {
+        production {
+            applicationId "net.elcurator.android.production"
+
+            def host = "www.elcurator.net"
+            buildConfigField "String", "BASE_URL", "\"https://$host\""
+            resValue "string", "HOST", host
+            
+            ...
+        }choose
+        staging {
+            applicationId "net.elcurator.android.staging"
+
+            def host = "elcurator-staging.herokuapp.com"
+            buildConfigField "String", "BASE_URL", "\"http://$host\""
+            resValue "string", "HOST", host
+            
+            ...
+        }
+        dev {
+            applicationId "net.elcurator.android.dev"
+
+            def host = "10.42.12.218:3000"
+            buildConfigField "String", "BASE_URL", "\"http://$host\""
+            resValue "string", "HOST", host
+            
+            ...
+        }
+    }
+	``` 
+	The elCurator application has 3 build variants. One for development for which the API host is a local address, one for staging for which the API host is the staging server address, and the last one for production, for which the API host is the production server address.
+
+	So if you are running the elCurator server application on the local network, you can specify its address in the development build variant, otherwise, your can choose the staging build variant. 
+	
+7. You can now run the application.
+
+##### Run the unit tests
+
+1. Go to the left menu in Android Studio and click on *build variants*. You should see a *test artifacts* drop down button in the left side bar. There you can choose between Android *instrumentation tests* and *unit tests*. Choose *unit tests*.
+
+	###### For testing our application, we are using [Robolectric](http://robolectric.org/). It is a library permitting to run Android unit tests directly in a JVM, which is far more efficient than running it in a simulator.
+	
+2. In the file manager of Android Studio, right click on the `net.elcurator.android` package from the `test` directory and select *run tests in `net.elcurator.android`*.
+
+##### Release the application
+
+###### Since the CI server is building a release package for each code version, you should never have to do it manually. Nevertheless, we prefer document how it is working under the hood so you are able to do it yourself in case the CI sever is down.
+
+1. Go to the *build* menu in the top menu bar of Android Studio and click on *generate signed APK*. 
+
+2. In the popup window which has just been shown, choose the `app` module and click on *next*.
+
+3. Then enter this *keystore path*; `app/release.keystore`.
+
+4. The *key alias* is `elcuratorkey`. For the *keystore password* and *key password* ask it to your manager. Click on *next*.
+
+5. Android Studio will generate a signed apk which you will be able to publish to the *Play store*.
+
+##### Install the staging application from the private elCurator Store.
+
+1. From your device, go to `https://1986-elcurator-store.appaloosa-store.com/1986-elcurator-store/mobile_applications?locale=fr` with Chrome.
+
+2. Sign-in with your OCTO email address. If you haven't received the password yet, ask to your manager to register an account for you in Appaloosa Store.
+
+3. From here, you should be able to download and install the `elCurator Staging-debug` APK on your device.
+
+###### You don't need to publish this APK yourself since the CI server is already doing it for each code version.
 
 ## Useful resources
 
