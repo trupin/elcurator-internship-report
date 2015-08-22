@@ -8,9 +8,8 @@ The project I am asking to work on is called *CarValley*. It is a carpool applic
 
 ## Email
 
-```
 Me to David Alia 08/20/2015
-```
+
 
 Hello David,
 
