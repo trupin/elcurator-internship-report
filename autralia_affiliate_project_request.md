@@ -29,9 +29,9 @@ We are using lean startup and agile methodologies at *elCurator* to develop the 
 
 I really loved to be working on a challenging product and I would like to continue on this way. Being a developer on a project like *elCurator* or *CarValley* is not only technical. It needs the whole team to be involved in the project life. This is what I find the most stimulating.
 
-I also lived in California for 8 months during my studies, and I know pretty well the bay area. By the way, some people who working there told me that they would use a tool like *CarValley* if one were existing. English is not an issue to me. I actually like to communicate in english. Of course, I would really enjoy discovering this beautiful area a little deeper.
+I also lived in California for 8 months during my studies, and I know pretty well the bay area. By the way, some people working there told me they would use a tool like *CarValley* if one were existing. English is not an issue to me. I actually like to communicate in english. And of course, I would really enjoy discovering this beautiful area a little deeper.
 
-I know I don't have so much professional background, but I still have a large range of skills and I think you will need fully operational people like me to quickly get results on *CarValley*.
+Even I don't have so much professional background, I still have a large range of skills and I think you will need fully operational people like me to quickly get results on *CarValley*.
 
 I am fully available to talk with you about my candidature.
 
@@ -51,13 +51,9 @@ This part constists of writing an email addressed to a high placed manager of th
 
 ## Context
 
-The project I am asking to work on is the same one as in the previous part, but at a diferent stage of the project.
+This time, I tries to convince the CEO of OCTO Technology to give me a budget in order to produce and start the *CarValley* project in the San Francisco bay area.
 
-In this context, I would try to convince the CEO of OCTO Technology to give me a budget in order to produce and start the *CarValley* project in the bay area.
-
-Few weeks before I send this email, we had a brown bag lunch (BBL) about intrapreneurship. A BBL is a meeting we at lunch time in order to discuss about a topic. That day I had the occasion to talk with him about the affiliate OCTO started at San Francisco. He explained it was complicated to sign big contracts there because they are used to invest in promising startup teams, and they does not believe to IT service/consulting so much.
-
-OCTO Technology is a company where the administration is transparent with the employees. It is actually normal to talk about sports at lunch time with the company's CEO with no embarassment.
+Few weeks before I send this email, we had a brown bag lunch (BBL) about intrapreneurship. A BBL is a meeting organized at lunch time in order to discuss about a topic. At this occasion, I talked with him about the affiliate OCTO started at San Francisco. He explained to me it was complicated to find interesting clients there because they are used to invest in promising startup teams, and they do not believe in IT service/consulting that much.
 
 ## Email
 
@@ -68,9 +64,25 @@ OCTO Technology is a company where the administration is transparent with the em
 	
 Hello François,
 
-I do not know if you remember the dicussion we had at the last BBL. It was about intrapreneurship. Anyway, I remember. It was very interesting, and I thank you for that. It is actually pretty rare to be able to communicate directly to the company's director with such simplicity.
+I hope you are well.
 
+I do not know if you remember the dicussion we had at our last BBL. Anyway, it was very interesting, and I thank you for that.
 
+You talked about OCTO Technology's difficulties to find interesting clients in the San Francisco bay area. You also mentioned that it might be because big companies there are more interested in young promising start-ups than IT service and consulting company.
+
+I agree with you on that point, IT consulting is probably not the best way of doing business in the bay area. They are certainly already convinced (and they are probably true) they know how to build profitable products.
+
+I have been thinking a lot about this topic then, and I thought of a probably better business model for our local affiliate. Why not producing highly valuable products by using the local ecosystem? When I studied there, something catched my attention. Everybody there is interested in the last hightech services getting on the market. I am not saying people are easily convinced, but they are a lot more open minded and communicative about hightech products than in Paris.
+
+I would not write this without a nice product idea to propose. When I was in San Francisco, I also noticed that many people were working at Palo Alto (where all the big IT companies are) but living in the bay area. Most of them are forced to take their car every day to go to work, which is long and annoying when the trafic is dense.
+
+A friend and I developed at the time an application called *CarValley* to provide to these people an easy way to organize themself in order to go to work together. We thought of a sort of *BlaBlaCar*, designed for people working in Palo Alto. Unfortunately, we had to come back in France before launching the product.
+
+If you let me go there, I would be able to sell this product by directly soliciting the big companies like Facebook or Google who love this kind of ideas. It would of course be an intrapreneurship, like OCTO already did for several products here in Paris. That way I could profit of the OCTO's structure and human resources to create a strong team. In compensation, I would give you results.
+
+I am convinced this project would be a nice move for our affiliate. Even if we consider that we do not get enough results to continue the product in one, or two years, we will have created a strong business network around it, and I really think this is how people do business there. Talented profiles start a project, talk and show around them what they can do, then, even if the project is not making enough money, they still have a powerful professional network permitting them to start another business with each time more chances on their side.
+
+I am fully available to talk with you about this proposal.
 
 Best regards
 	
