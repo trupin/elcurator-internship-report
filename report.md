@@ -819,9 +819,9 @@ You will find here a non exaustive list of resourceful documents. It is very imp
 - [Rails architecture](http://adrianmejia.com/blog/2011/08/11/ruby-on-rails-architectural-design/)
 - [RESTful API best practices](http://blog.octo.com/en/design-a-rest-api/)
 
-##### Mobile application development
+#### Mobile application development
 
-###### Android
+##### Android
 - [Google material design specifications](http://www.google.com/design/spec/material-design/introduction.html)
 - [Official android training courses](https://developer.android.com/training/index.html)
 - [Learning guide](https://github.com/codepath/android_guides/wiki/Beginning-Android-Resources)
@@ -831,7 +831,7 @@ You will find here a non exaustive list of resourceful documents. It is very imp
 - [How Facebook improved performances on Android with flatbuffers](https://code.facebook.com/posts/872547912839369/improving-facebook-s-performance-on-android-with-flatbuffers/)
 - [Android project template for testing](https://github.com/googlesamples/android-testing-templates)
 
-###### iOS
+##### iOS
 - [Learning guide](https://github.com/codepath/ios_guides/wiki)
 - [Best practices for the beginner](https://github.com/futurice/ios-good-practices)
 - [NSHipster: last iOS developer news](http://nshipster.com/)
