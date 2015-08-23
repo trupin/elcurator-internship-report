@@ -1,7 +1,32 @@
 #ElCurator - The developer's beginning guide
 
-Just like software, this document will rot unless we take care of it. We encourage you to help us on that by giving us your feedbacks.
+## Summary
 
+1. [What is this document for?](#what_is_this_document)
+2. [A startup inside OCTO Technology](#a_startup_inside_octo_technology)
+	1. [What is OCTO Techonoly?](#what_is_octo_technology)
+	2. [From the one day hacking project, to the affiliated company](#from_the_one_day_hacking_project_to_the_affiliated_company)
+	3. [Are we a startup?](#are_we_a_startup)
+	4. [Are we an intrapreneurship?](#are_we_an_intrapreneurship)
+	5. [And Juridically?](#and_juridically)
+	6. [Our legacy](#our_legacy)
+3. [The team](#the_team)
+4. [The product](#the_product)
+	1. [The concept](#the_concept)
+	2. [Why our clients need us?](#why_our_clients_need_us)
+	3. [The main features](#the_main_features)
+5. [Our methodologies](#our_methodologies)
+	1. [Lean startup](#lean_startup)
+	2. [Agilility](#agility)
+	3. [Production workflow](#production_workdlow)
+	4. [Continuous integration server](#continuous_integration_server)
+	5. [Test-driven development](#test_driven_development)
+6. [Application architecture](#application_architecture)
+7. [Getting started](#getting_started)
+8. [Useful resources](#userful_resources)
+9. [Thanks for reading](#thanks_for_reading) 
+
+<div id='what_is_this_document'>
 ## What is this document for?
 
 If you are reading this, you probably just arrived in the elCurator's developers team. First of all, welcome, and congratulation.
@@ -10,12 +35,14 @@ Because we are aware there is a lot of informations to absorb during your first 
 
 This document is obviously targeting the developers, but we put all our efforts to make it understandable by everybody. If you are curious about what we are doing at elCurator, and even if you are not a developer, this document should still be interesting, and we hope it will statisfy your curiosity.
 
+<div id='a_startup_inside_octo_technology'>
 ## A startup inside OCTO Technology
 
 It is actually quite complex to explain what is our working environment. What is OCTO Technology and how is it related to us? Are we an independant company or not? Who is investing? 
 
 We try to clarify these points in this chapter.
 
+<div id='what_is_octo_technology'>
 ### What is OCTO Technology?
 
 First of all, we should explain what is exactly **OCTO Technology**. You can find all the informations you need about this company on its [website](http://www.octo.com/en/who-we-are). Even though, we define OCTO Technology as an **IT consulting, design and implementation company**. Founded in 1998, OCTO is now employing 230 people in 5 coutries: France, Brazil, Switzerland, Morocco and Autralia. The OCTO community is mainly made up of IT consultants, and the main activity of OCTO is to guide and help realize its clients' projects.
@@ -27,33 +54,39 @@ There is a way of doing things at OCTO which pushes its employees to think about
 - [Appaloosa](https://www.appaloosa-store.com/?locale=en) which is a private mobile application store.
 - [elCurator](https://www.elcurator.net/en) which is a collaborative curation platform, but we will explain what it is in the next parts of this document.
 
+<div id='from_the_one_day_hacking_project_to_the_affiliated_company'>
 ### From the one day hacking project, to the affiliated company
 
 ElCurator is a product which was **initiated by two consultants of OCTO Technology** in 2012, during a particular day called the OCTO day. This event is happening once a year, and is aimed to let every employees work on whatever they want, as long as it is useful to the company.
 
 That day, **Christopher Parola** - now CEO of the company - started the project with several workmates, and in one day of work, they tried to make a prototype. This was a failure since it was not working as expected, and Christopher continued to work on it on his free time. **Jeremy Venezia** - now CTO of the company - joined him several weeks after that, and helped him in his task. The product began to work, and a few consultants at OCTO started using it. With time, more and more people were using it, and Christopher and Jeremy decided to **deploy it to the whole company**. Maintaining the project was taking to much time, and the two consultants asked to be full-time working on it. This is how elCurator began to live, as a project funded by OCTO Technology. In June 2014, the project has been **publicly released** and OCTO Technology started to communicate on it in order to sell it to other companies (mainly to its own clients). In January 2015, the project has been **affiliated**, and it became a company named **elCurator SAS**.
 
+<div id='are_we_a_startup'>
 ### Are we a startup?
 
 A startup is an entrepreneurial venture or a new business in the form of a company, a partnership or temporary organization designed to search for a repeatable and scalable business model.
 
 This correspond pretty well to our situation since we are still searching our place on the market by trying to reach as much clients as possible.
 
+<div id='are_we_an_intrapreneurship'>
 ### Are we an intrapreneurship?
 
 Intrapreneurship is the act of behaving like an entrepreneur while working within a large organization.
 
 We can say we are an intrapreneurship as well, since elCurator has been created and directed by two OCTO consultants from its begining.
 
+<div id='and_juridically'>
 ### And Juridically?
 
 We are a **simplified limited liability company**, which is what *SAS* is actually meaning in french. We are an **affiliate** of OCTO Technology as well, since it owns more than 50% of the our capital.
 
+<div id='our_legacy'>
 ### Our legacy
 
 As we just said, elCurator started living inside OCTO Technology. Its creators are two former consultants. We are all the time in relationship with other consultants of the company. This is actually a good thing since OCTO has a very resourceful community made up of experts on many topics (the [OCTO blog](http://blog.octo.com/) demonstrates it pretty well). This is obviously influencing our way of working together, our methologies, etc... It is a very resourceful legacy to us.
 
-## Our team
+<div id='the_team'>
+## The team
 
 ![Organization chart](images/organization_chart.png)
 
@@ -72,10 +105,12 @@ Since we are an affiliate of OCTO Technology, we beneficiate of some extra servi
 
 This extra help is very important because it provides us some kinds of frameworks on which we can rely when we don't have the necessary skills. For example, when Christopher had to write a contract from scratch for our first client, he has been able to get some help by OCTO. We also get some help when we need to hire new people. And many more examples...
 
+<div id='the_product'>
 ## The product
 
 We talked about the company's situation, but we have not explained the activity of elCurator. What are we actually doing here? As you must have understood, elCurator SAS is a software company developing and selling a product named elCurator. In this chapter, you will find the informations you need about the product to easily understand and start manipulating it. We think each members of our team should be capable of explaining the product and talking about it outside our walls.
 
+<div id='the_concept'>
 ### The concept
 
 ElCurator is a **collaborative [curation](https://www.elcurator.net/en/curation) platform**. In other words, our mission is to encourage workmates to share high quality contents in their company, and highlight the best shared contents.
@@ -86,6 +121,7 @@ The concept is defined by 3 main steps:
 2. **Add** a short description to justify why the content is relevant.
 3. **Share** it to a community.
 
+<div id='why_our_clients_need_us'>
 ### Why our clients need us?
 
 Since June 2014, when we publicly launched the product, we started recognizing our clients. Obviously, we are targetting medium and large businesses. Our strategy is mainly a B2B (business to business) strategy. Some functionalities are B2C (business to client) oriented, but the goal is always to be more relevant to large companies by being more famous on the market.
@@ -97,6 +133,7 @@ So far, we identified that our product is a good fit for medium digital and cons
 * **Collective knowledge capitalization**. The content of the company is saved and the users can peform searches and follow the platform's recommendations to navigate between articles.
 * **Continuous formation**. Every workmates can easily reach expert contents and quickly start developing new skills.
 
+<div id='the_main_features'>
 ### The main features
 
 If you are going to work at elCurator, you need to know what are the product main features, so you realize what are its main use cases.
@@ -106,6 +143,7 @@ Elcurator is made of several tools:
 - A **website**, which is the most used platform by our users so far.
 - Two **mobile applications**; Android and iOS.
 
+<div id='user_story_the_web_platform'>
 #### User story: the web platform
 
 Because a features list would not be very attractive to read, let's tell a user story.
@@ -247,6 +285,7 @@ He clicks on the *world* button in the navigation bar.
 
 This list is the same as the crew's list except it only contains the publicly shared articles, and there is a way of filtering by tags instead of categories.
 
+<div id='user_story_the_mobile_applications'>
 #### User story: the mobile applications
 
 ######Note: we wont describe here the iOS's features since they are equivalent as what is implemented on Android.
@@ -294,10 +333,12 @@ Manu is now in the subway. He wants to continue to read his article in elCurator
 
 ###### Note: almost every features are also accessible offline in the mobile application.
 
+<div id='user_story_the_end'>
 #### User story: the end
 
 Manu is now an happy manager since he has setup an engaging sharing policy in his workteam. His workmates are now able to share their knowledge together, and Manu can even see the statistics of his crew in order to measure if elCurator is efficient or not.
 
+<div id='our_methodologies'>
 ## Our methodologies
 
 Developing a product with many use cases like elCurator is not an easy task. We need to be focused on development quality, client support, our marketing image, finding clients, etc.
@@ -306,6 +347,7 @@ There are many topics to study, many metrics to observe, many skills to have, an
 
 In this chapter, you will learn our way of getting things done at elCurator.
 
+<div id='lean_startup'>
 ### Lean startup
 
 The lean startup is a method for developing businesses and products developped by Eric Ries in 2008. He actually based his work on The Four Step to the Epiphany, written by Steve Blank, which describes the lifecycle of a startup from the begining to success.
@@ -333,6 +375,7 @@ To simplify things, we like to say:
 
 We are a little team. We do not have many resources. We work on a high risk project, since we still don't know if we will be able to make monney with it. For all these reasons, we need to learn from our users to find our place on the market. We are convinced lean startup is a very efficient methodology to do it.
 
+<div id='agility'>
 ### Agilility
 
 Agile software development is a group of software development methods in which solutions evolve through collaboration between self-organizing and cross-functional teams. It promotes adaptive planning, evolutionary development, early delivery, continuous improvement, and encourages rapid and flexible response to change.
@@ -360,6 +403,7 @@ At elCurator, we are trying to apply the following principles as much as possibl
 
 Agile methodologies permits to produce quality code, to continuousy improve our process, and always adapt our organization to the problematics. All of this is essential to discover and learn about our product ecosystem. In fact, agile and lean start-up are complementary.
 
+<div id='production_workdlow'>
 ### Production workflow
 
 #### Kanban
@@ -408,6 +452,7 @@ The chart below explains how we actually use our Kanban.
 
 ###### Notice how we arranged this workflow to make it as agile and lean as possible. The releases are continuous, which means we try to push our code in production as soon as a feature is ready. The *validated* buffer is only here in case the release is technically impossible, so the process is not stopped. Right after a problem is detected, it is immediately communicated and put backward in the process so it can be fixed as soon as possible. Of course, the workflow was not like this at the begining of the project. We improved it little by little to obtain the process we have today, and you can be sure it will evolve again in the future.
 
+<div id='continuous_integration_server'>
 ### Continuous integration server
 
 We saw that our production workflow is lean, and necessitates to be continuous. To continuously be able to push our code in production, we need to always be aware of the build state of the project. This is what the continuous integration server is doing for us. 
@@ -437,6 +482,7 @@ Let's explain this chart a little:
 
 ###### Note: The staging web server and staging mobile applications are not only used for validation. They are also very useful to observe the project's state at any time. It is indeed very stimulating to be able to see what our team is producing, at least to be proud of our work, but also to be able to easily share our opinion about it.
 
+<div id='test_driven_development'>
 ### Test-driven development
 
 The continuous integration methodology is very important to us because this is our only way to know if the project is ready for production or not. And you must have noticed that this methodology cannot be efficient if we do not write automated tests.
@@ -454,6 +500,7 @@ As we can see above, it is a process that relies on the repetition of a very sho
 
 At elCurator, we think automated tests are extremely important. Most of the time, if you commit some untested code, it will be rejected at the *code review* step, and an experimented developer will ask you to implement them. Of course, we are aware that it is not an easy task, and you will find the necessary resources in our team or in OCTO Technology to learn how to efficiently test your code.
 
+<div id='application_architecture'>
 ## Application architecture
 
 In this chapter, we will describe the layers of components or services that are used to provide our website, our API and our mobile applications.
@@ -525,6 +572,7 @@ The chart above represents how the different logical modules are interacting wit
 	
 3. **Data synchronization between the server and the mobile applications**. We implemented the [swipe to refresh](https://www.google.com/design/spec/patterns/swipe-to-refresh.html) pattern so the data can be refreshed on demand on the user. This if great when the user is using the applicatoin, but when he lets it running on the background, it still needs the last shared articles, comments, etc... to be up to date. To perform this, we use the push notification handler, which is implemented on both iOS and Android. For example, when an article is shared, the server silently notifies the mobile applications that there is a new article to request, giving its remote id. The push notification handler then use the article manager to fetch the article data from the server and store it in the database.
 
+<div id='getting_started'>
 ## Getting started
 
 ### Server application
@@ -753,6 +801,7 @@ In this chapter your will find all the informations you need to getting started 
 
 ###### You don't need to publish this APK yourself since the CI server is already doing it for each code version.
 
+<div id='userful_resources'>
 ## Useful resources
 
 You will find here a non exaustive list of resourceful documents. It is very important to us that you quickly get a preview of the topics we are dealing with here at elCurator, and we think these documents can help.
@@ -787,6 +836,7 @@ You will find here a non exaustive list of resourceful documents. It is very imp
 - [Best practices for the beginner](https://github.com/futurice/ios-good-practices)
 - [NSHipster: last iOS developer news](http://nshipster.com/)
 
+<div id='thanks_for_reading'>
 ## Thanks for reading
 
 We hope this document has been useful. We are very excited to have new people in our team. The fact that you read this entire document demonstrates you are motivated. It will probably be a good experience to have you with us then.
